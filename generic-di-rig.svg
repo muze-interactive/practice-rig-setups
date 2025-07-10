@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .component { fill: #fff3e0; stroke: #f57c00; stroke-width: 2; }
+      .connection { stroke: #424242; stroke-width: 3; marker-end: url(#arrowhead); }
+      .label { font-family: Arial, sans-serif; font-size: 12px; fill: #212121; }
+      .title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #f57c00; }
+      .venue { fill: #ffebee; stroke: #c62828; stroke-width: 2; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#424242" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">Generic DI Rig</text>
+
+  <!-- Components -->
+  <rect x="50" y="80" width="80" height="40" rx="5" class="component"/>
+  <text x="90" y="105" text-anchor="middle" class="label">Bass</text>
+
+  <rect x="180" y="80" width="100" height="40" rx="5" class="component"/>
+  <text x="230" y="105" text-anchor="middle" class="label">Effects Chain</text>
+
+  <rect x="330" y="80" width="120" height="40" rx="5" class="component"/>
+  <text x="390" y="105" text-anchor="middle" class="label">DI/Preamp</text>
+
+  <!-- Venue PA System -->
+  <rect x="500" y="80" width="120" height="60" rx="5" class="venue"/>
+  <text x="560" y="105" text-anchor="middle" class="label">Venue PA</text>
+  <text x="560" y="120" text-anchor="middle" class="label">System</text>
+  <text x="560" y="135" text-anchor="middle" class="label">(Required)</text>
+
+  <!-- Headphones Option -->
+  <rect x="500" y="160" width="120" height="40" rx="5" class="component"/>
+  <text x="560" y="185" text-anchor="middle" class="label">Headphones</text>
+
+  <!-- Connections -->
+  <line x1="130" y1="100" x2="180" y2="100" class="connection"/>
+  <line x1="280" y1="100" x2="330" y2="100" class="connection"/>
+  <line x1="450" y1="100" x2="500" y2="110" class="connection"/>
+
+  <!-- Alternative path to headphones -->
+  <line x1="450" y1="100" x2="500" y2="180" class="connection"/>
+
+  <!-- Benefits and Tradeoffs -->
+  <text x="50" y="240" class="label" font-weight="bold">Benefits:</text>
+  <text x="50" y="260" class="label">• Highly portable - single bag</text>
+  <text x="50" y="275" class="label">• Highly flexible DI/Preamp options</text>
+  <text x="50" y="290" class="label">• Ideal for headphones/travel practice</text>
+
+  <text x="400" y="240" class="label" font-weight="bold">Tradeoffs:</text>
+  <text x="400" y="260" class="label">• Completely reliant on venue PA</text>
+  <text x="400" y="275" class="label">• Preamp Amp/IR config may not</text>
+  <text x="400" y="290" class="label">  work well with venue PA system</text>
+</svg>

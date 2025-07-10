@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .component { fill: #e1f5fe; stroke: #0277bd; stroke-width: 2; }
+      .connection { stroke: #424242; stroke-width: 3; marker-end: url(#arrowhead); }
+      .label { font-family: Arial, sans-serif; font-size: 14px; fill: #212121; }
+      .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1565c0; }
+      .small-label { font-family: Arial, sans-serif; font-size: 11px; fill: #212121; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#424242" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">Home/Portal Practice Rig</text>
+
+  <!-- Components -->
+  <rect x="50" y="80" width="100" height="60" rx="5" class="component"/>
+  <text x="100" y="105" text-anchor="middle" class="label">Bass</text>
+
+  <rect x="180" y="80" width="120" height="60" rx="5" class="component"/>
+  <text x="240" y="105" text-anchor="middle" class="label">Effects Chain</text>
+
+  <rect x="330" y="80" width="140" height="60" rx="5" class="component"/>
+  <text x="400" y="105" text-anchor="middle" class="label">Trace Elliot ELF</text>
+
+  <!-- Outputs -->
+  <rect x="500" y="60" width="100" height="40" rx="5" class="component"/>
+  <text x="550" y="80" text-anchor="middle" class="small-label">DI Preamp</text>
+  <text x="550" y="90" text-anchor="middle" class="small-label">→ Mains/DAW</text>
+
+  <rect x="500" y="115" width="100" height="40" rx="5" class="component"/>
+  <text x="550" y="135" text-anchor="middle" class="small-label">Amp</text>
+  <text x="550" y="145" text-anchor="middle" class="small-label">→ Monitor</text>
+
+  <!-- Connections -->
+  <line x1="150" y1="110" x2="180" y2="110" class="connection"/>
+  <line x1="300" y1="110" x2="330" y2="110" class="connection"/>
+
+  <!-- Split from ELF to outputs -->
+  <line x1="470" y1="110" x2="500" y2="80" class="connection"/>
+  <line x1="470" y1="110" x2="500" y2="135" class="connection"/>
+
+  <!-- Benefits and Tradeoffs -->
+  <text x="50" y="200" class="label" font-weight="bold">Benefits:</text>
+  <text x="50" y="220" class="label">• Less components</text>
+  <text x="50" y="235" class="label">• Flexible, suitable for simulation</text>
+  <text x="50" y="250" class="label">• Small setup, portable</text>
+
+  <text x="400" y="200" class="label" font-weight="bold">Tradeoffs:</text>
+  <text x="400" y="220" class="label">• More complicated setup</text>
+  <text x="400" y="235" class="label">• Small wattage for practice</text>
+  <text x="400" y="250" class="label">• May not suit multi-piece band</text>
+</svg>

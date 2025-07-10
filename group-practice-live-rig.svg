@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .component { fill: #e8f5e8; stroke: #2e7d32; stroke-width: 2; }
+      .connection { stroke: #424242; stroke-width: 3; marker-end: url(#arrowhead); }
+      .label { font-family: Arial, sans-serif; font-size: 14px; fill: #212121; }
+      .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #2e7d32; }
+      .small-label { font-family: Arial, sans-serif; font-size: 11px; fill: #212121; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#424242" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">Group Practice/Simple Live Rig</text>
+
+  <!-- Components -->
+  <rect x="50" y="80" width="100" height="60" rx="5" class="component"/>
+  <text x="100" y="120" text-anchor="middle" class="label">Bass</text>
+
+  <rect x="180" y="80" width="120" height="60" rx="5" class="component"/>
+  <text x="240" y="105" text-anchor="middle" class="label">Effects Chain</text>
+
+  <rect x="330" y="80" width="140" height="60" rx="5" class="component"/>
+  <text x="400" y="105" text-anchor="middle" class="label">GK Fusion 112</text>
+
+  <!-- Outputs -->
+  <rect x="500" y="60" width="100" height="40" rx="5" class="component"/>
+  <text x="550" y="80" text-anchor="middle" class="small-label">DI Preamp</text>
+  <text x="550" y="90" text-anchor="middle" class="small-label">→ Mains</text>
+
+  <rect x="500" y="110" width="100" height="40" rx="5" class="component"/>
+  <text x="550" y="130" text-anchor="middle" class="small-label">Internal Amp</text>
+  <text x="550" y="140" text-anchor="middle" class="small-label">→ Internal Speaker</text>
+
+  <rect x="500" y="160" width="100" height="40" rx="5" class="component"/>
+  <text x="550" y="180" text-anchor="middle" class="small-label">External Amp</text>
+  <text x="550" y="190" text-anchor="middle" class="small-label">→ External Cabs</text>
+
+  <!-- Connections -->
+  <line x1="150" y1="110" x2="180" y2="110" class="connection"/>
+  <line x1="300" y1="110" x2="330" y2="110" class="connection"/>
+
+  <!-- Split from GK Fusion to outputs -->
+  <line x1="470" y1="110" x2="500" y2="80" class="connection"/>
+  <line x1="470" y1="110" x2="500" y2="130" class="connection"/>
+  <line x1="470" y1="110" x2="500" y2="180" class="connection"/>
+
+  <!-- Benefits and Tradeoffs -->
+  <text x="50" y="220" class="label" font-weight="bold">Benefits:</text>
+  <text x="50" y="240" class="label">• Simple</text>
+  <text x="50" y="255" class="label">• Good for practice/jamming</text>
+  <text x="50" y="270" class="label">• Flexible venue support</text>
+  <text x="50" y="285" class="label">• Drive PA or external cabs</text>
+
+  <text x="400" y="220" class="label" font-weight="bold">Tradeoffs:</text>
+  <text x="400" y="240" class="label">• GK DI/Amp may not suit all venues</text>
+  <text x="400" y="255" class="label">• Worse portability</text>
+</svg>
