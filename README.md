@@ -173,4 +173,4 @@ I also factor in recording multiple tracks for learning purposes:
 
 ### Important considerations
 
-Note that the D
+TBD
