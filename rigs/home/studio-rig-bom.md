@@ -50,6 +50,8 @@
 |------|-------------|---------------|---------|-------|
 | Anytune | Commercial | $20-50 | Backing track playback | Speed/pitch control |
 | MoisesAI | Subscription | $10-20/month | AI backing tracks | Stem separation |
+| Soundslice | Plus Subscription | $50/year | Learning/Transcription | Looper/Playback |
+| Songsterr | Plus Subscription | $10/month | Learning ||
 | Chrome Browser | Free | $0 | Web-based content | YouTube, streaming services |
 
 ## Cables & Adapters Summary
