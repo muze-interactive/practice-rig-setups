@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" width="1400" height="700" font-family="Inter, Helvetica, Arial, sans-serif" stroke="#000" stroke-width="2" fill="none">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000" />
+    </marker>
+    <style><![CDATA[
+      .label{fill:#000;font-size:20px;text-anchor:middle;dominant-baseline:middle;}
+      .sublabel{fill:#000;font-size:16px;text-anchor:middle;dominant-baseline:middle;}
+      .portlabel{fill:#000;font-size:14px;text-anchor:start;dominant-baseline:middle;}
+      .box{fill:#fff;stroke:#000;stroke-width:2;rx:12;ry:12;}
+      .dotted{stroke-dasharray:6 6;}
+    ]]></style>
+  </defs>
+
+  <!-- Layout guide (not rendered) -->
+  <g id="grid" visibility="hidden"></g>
+
+  <!-- ========= HARDWARE ROW ========= -->
+  <!-- Bass -->
+  <g id="bass" transform="translate(80,300)">
+    <rect class="box" x="-60" y="-40" width="120" height="80"/>
+    <text class="label" x="0" y="0">Bass</text>
+  </g>
+
+  <!-- Pedalboard / FX Chain -->
+  <g id="fx" transform="translate(300,220)">
+    <rect class="box" x="-90" y="-50" width="180" height="100"/>
+    <text class="label" x="0" y="0">FX Chain</text>
+    <text class="sublabel" x="0" y="26">(Pedals / HX Stomp)</text>
+  </g>
+
+  <!-- Trace Elliot ELF -->
+  <g id="elf" transform="translate(520,300)">
+    <rect class="box" x="-110" y="-50" width="220" height="100"/>
+    <text class="label" x="0" y="-4">Trace Elliot ELF</text>
+    <text class="sublabel" x="0" y="24">Preamp • DI • Amp</text>
+  </g>
+
+  <!-- Focusrite Scarlett -->
+  <g id="scarlett" transform="translate(820,300)">
+    <rect class="box" x="-130" y="-50" width="260" height="100"/>
+    <text class="label" x="0" y="-4">Focusrite Scarlett 4i4</text>
+    <text class="sublabel" x="0" y="24">USB Audio Interface</text>
+  </g>
+
+  <!-- MacBook Pro -->
+  <g id="mac" transform="translate(1120,300)">
+    <rect class="box" x="-120" y="-50" width="240" height="100"/>
+    <text class="label" x="0" y="0">MacBook Pro</text>
+  </g>
+
+  <!-- Adam F5 Monitors -->
+  <g id="adam" transform="translate(820,520)">
+    <rect class="box" x="-120" y="-60" width="240" height="120"/>
+    <text class="label" x="0" y="-8">Adam F5</text>
+    <text class="sublabel" x="0" y="24">Studio Monitors (L/R)</text>
+  </g>
+
+  <!-- Headphones -->
+  <g id="headphones" transform="translate(1120,520)">
+    <rect class="box" x="-110" y="-50" width="220" height="100"/>
+    <text class="label" x="0" y="0">Headphones</text>
+    <text class="sublabel" x="0" y="26">(Audio‑Technica)</text>
+  </g>
+
+  <!-- Trace Monitor Cab -->
+  <g id="tracecab" transform="translate(520,520)">
+    <rect class="box" x="-110" y="-50" width="220" height="100"/>
+    <text class="label" x="0" y="0">Trace Monitor Cab</text>
+    <text class="sublabel" x="0" y="26">(ELF Speaker Out)</text>
+  </g>
+
+  <!-- ========= SOFTWARE CALLOUT ========= -->
+  <g id="software" transform="translate(1120,80)">
+    <rect class="box dotted" x="-200" y="-60" width="400" height="240"/>
+    <text class="label" x="0" y="-30">Mac Software Routing</text>
+
+    <!-- Mac Apps group -->
+    <g id="macapps" transform="translate(-110,20)">
+      <rect class="box" x="-80" y="-30" width="160" height="60"/>
+      <text class="sublabel" x="0" y="-4">Mac Apps</text>
+      <text class="portlabel" x="-70" y="16">Anytune / Moises / Browser</text>
+    </g>
+
+    <!-- Loopback RecordingRouter -->
+    <g id="loopback" transform="translate(0,80)">
+      <rect class="box" x="-90" y="-40" width="180" height="80"/>
+      <text class="sublabel" x="0" y="-8">Loopback</text>
+      <text class="sublabel" x="0" y="16">RecordingRouter</text>
+    </g>
+
+    <!-- Logic Pro DAW -->
+    <g id="logic" transform="translate(110,20)">
+      <rect class="box" x="-80" y="-30" width="160" height="60"/>
+      <text class="sublabel" x="0" y="-4">Logic Pro</text>
+      <text class="portlabel" x="-60" y="16">DAW</text>
+    </g>
+  </g>
+
+  <!-- ========= SIGNAL LINES ========= -->
+  <!-- Bass direct to ELF -->
+  <line x1="140" y1="300" x2="410" y2="300" marker-end="url(#arrow)"/>
+
+  <!-- Bass to FX -->
+  <line x1="140" y1="300" x2="210" y2="220" marker-end="url(#arrow)"/>
+
+  <!-- FX to ELF -->
+  <line x1="390" y1="220" x2="470" y2="300" marker-end="url(#arrow)"/>
+
+  <!-- ELF to Scarlett (XLR DI) -->
+  <line x1="630" y1="300" x2="690" y2="300" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="660" y="286">XLR DI</text>
+
+  <!-- Scarlett to Mac (USB) -->
+  <line x1="950" y1="300" x2="1000" y2="300" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="975" y="286">USB‑C</text>
+
+  <!-- ELF to Trace Cab (speaker out) -->
+  <line x1="520" y1="350" x2="520" y2="470" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="530" y="410">Speaker Out</text>
+
+  <!-- Scarlett to Adam F5 -->
+  <line x1="820" y1="350" x2="820" y2="460" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="830" y="410">Line Out 1–2</text>
+
+  <!-- Scarlett to Headphones (local) -->
+  <line x1="950" y1="340" x2="1060" y2="470" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="1030" y="410">HP Out</text>
+
+  <!-- ===== Software internal lines ===== -->
+  <!-- Mac Apps to Loopback -->
+  <line x1="1010" y1="100" x2="1060" y2="140" marker-end="url(#arrow)"/>
+
+  <!-- Scarlett input feed into Loopback (virtual) -->
+  <line x1="1120" y1="240" x2="1120" y2="150" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="1130" y="190">Scarlett Inputs</text>
+
+  <!-- Loopback to Logic Pro -->
+  <line x1="1120" y1="180" x2="1230" y2="100" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="1180" y="130">Ch 1–4</text>
+
+  <!-- Loopback Monitor back to Scarlett -->
+  <line x1="1120" y1="180" x2="1120" y2="290" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="1130" y="230">Monitor Mix</text>
+
+  <!-- Logic Pro playback to Scarlett (device out) -->
+  <line x1="1230" y1="100" x2="1230" y2="290" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="1240" y="190">Playback</text>
+
+</svg>
+

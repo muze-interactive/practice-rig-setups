@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" font-family="Inter, Helvetica, Arial, sans-serif" stroke="#000" stroke-width="2" fill="none">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000" />
+    </marker>
+    <style><![CDATA[
+      .label{fill:#000;font-size:18px;text-anchor:middle;dominant-baseline:middle;}
+      .sublabel{fill:#000;font-size:14px;text-anchor:middle;dominant-baseline:middle;}
+      .portlabel{fill:#000;font-size:12px;text-anchor:start;dominant-baseline:middle;}
+      .box{fill:#fff;stroke:#000;stroke-width:2;rx:8;ry:8;}
+      .dotted{stroke-dasharray:4 4;}
+      .highlight{fill:#e6f3ff;stroke:#0066cc;stroke-width:2;}
+    ]]></style>
+  </defs>
+
+  <!-- ========= HARDWARE ROW ========= -->
+  <!-- Ibanez EHB Bass -->
+  <g id="bass" transform="translate(80,250)">
+    <rect class="box" x="-50" y="-35" width="100" height="70"/>
+    <text class="label" x="0" y="0">Ibanez EHB</text>
+    <text class="sublabel" x="0" y="22">Bass</text>
+  </g>
+
+  <!-- FX Pedals (Optional) -->
+  <g id="fx" transform="translate(250,180)">
+    <rect class="box dotted" x="-60" y="-30" width="120" height="60"/>
+    <text class="label" x="0" y="0">FX Pedals</text>
+    <text class="sublabel" x="0" y="20">(Optional)</text>
+  </g>
+
+  <!-- Apogee Jam -->
+  <g id="jam" transform="translate(450,250)">
+    <rect class="box highlight" x="-80" y="-40" width="160" height="80"/>
+    <text class="label" x="0" y="-4">Apogee Jam</text>
+    <text class="sublabel" x="0" y="20">A/D &amp; D/A Interface</text>
+  </g>
+
+  <!-- iPad -->
+  <g id="ipad" transform="translate(700,250)">
+    <rect class="box" x="-100" y="-50" width="200" height="100"/>
+    <text class="label" x="0" y="0">iPad</text>
+    <text class="sublabel" x="0" y="24">Host &amp; DAW</text>
+  </g>
+
+  <!-- Headphones -->
+  <g id="headphones" transform="translate(450,400)">
+    <rect class="box" x="-80" y="-40" width="160" height="80"/>
+    <text class="label" x="0" y="0">Headphones</text>
+    <text class="sublabel" x="0" y="22">Monitor Output</text>
+  </g>
+
+  <!-- ========= SOFTWARE CALLOUT ========= -->
+  <g id="software" transform="translate(700,80)">
+    <rect class="box dotted" x="-180" y="-50" width="360" height="200"/>
+    <text class="label" x="0" y="-25">iPad Software Routing</text>
+
+    <!-- iPad Apps group -->
+    <g id="ipadapps" transform="translate(-120,20)">
+      <rect class="box" x="-70" y="-25" width="140" height="50"/>
+      <text class="sublabel" x="0" y="-4">iPad Apps</text>
+      <text class="portlabel" x="-60" y="14">Anytune / Moises AI</text>
+    </g>
+
+    <!-- AUM Router -->
+    <g id="aum" transform="translate(0,80)">
+      <rect class="box highlight" x="-80" y="-35" width="160" height="70"/>
+      <text class="sublabel" x="0" y="-8">AUM Router</text>
+      <text class="sublabel" x="0" y="12">Virtual Mixer</text>
+    </g>
+
+    <!-- GarageBand DAW -->
+    <g id="garageband" transform="translate(120,20)">
+      <rect class="box" x="-70" y="-25" width="140" height="50"/>
+      <text class="sublabel" x="0" y="-4">GarageBand</text>
+      <text class="portlabel" x="-50" y="14">DAW</text>
+    </g>
+  </g>
+
+  <!-- ========= SIGNAL LINES ========= -->
+  <!-- Bass direct to Jam -->
+  <line x1="130" y1="250" x2="370" y2="250" marker-end="url(#arrow)"/>
+
+  <!-- Bass to FX (optional) -->
+  <line x1="130" y1="250" x2="190" y2="180" marker-end="url(#arrow)"/>
+
+  <!-- FX to Jam (optional) -->
+  <line x1="310" y1="180" x2="410" y2="250" marker-end="url(#arrow)"/>
+
+  <!-- Jam to iPad (Lightning/USB) -->
+  <line x1="530" y1="250" x2="600" y2="250" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="565" y="236">Lightning/USB</text>
+
+  <!-- Jam to Headphones -->
+  <line x1="450" y1="290" x2="450" y2="360" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="460" y="325">Headphone Out</text>
+
+  <!-- ===== Software internal lines ===== -->
+  <!-- iPad Apps to AUM -->
+  <line x1="620" y1="100" x2="660" y2="130" marker-end="url(#arrow)"/>
+
+  <!-- Jam input feed into AUM (virtual) -->
+  <line x1="700" y1="200" x2="700" y2="150" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="710" y="175">Jam Input</text>
+
+  <!-- AUM to GarageBand -->
+  <line x1="700" y1="180" x2="790" y2="100" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="750" y="130">Mix Output</text>
+
+  <!-- AUM Monitor back to Jam -->
+  <line x1="700" y1="180" x2="700" y2="240" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="710" y="210">Monitor Mix</text>
+
+  <!-- GarageBand playback to AUM -->
+  <line x1="790" y1="100" x2="790" y2="240" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="800" y="170">Playback</text>
+
+  <!-- ========= PORTABLE RIG FEATURES ========= -->
+  <g id="features" transform="translate(100,500)">
+    <text class="label" x="0" y="0" text-anchor="start">Portable Rig Features:</text>
+    <text class="portlabel" x="0" y="25" text-anchor="start">• Compact Ibanez EHB with bridge tuning</text>
+    <text class="portlabel" x="0" y="42" text-anchor="start">• Single-cable Apogee Jam interface</text>
+    <text class="portlabel" x="0" y="59" text-anchor="start">• AUM virtual routing replaces Loopback</text>
+    <text class="portlabel" x="0" y="76" text-anchor="start">• GarageBand DAW on iPad</text>
+    <text class="portlabel" x="0" y="93" text-anchor="start">• Headphone monitoring for portability</text>
+  </g>
+
+</svg>

@@ -36,7 +36,19 @@ DAW integration is interesting with all of this, but will cover that after.
 
 Let's get into rigs:
 
-## Home/Portal Practice Rig
+## Minimalist Portable Practice Rig
+
+### Rig configuration
+
+1.  Passive or Active Bass (onboard EQ) - Favor EHB
+
+2.  Apogee Jam AD/DA
+
+3.  iPad
+
+![Diagram](./rigs/portable/portable-rig-diagram.svg)
+
+## Home Studio Rig
 
 ### Rig configuration
 
@@ -52,7 +64,15 @@ Let's get into rigs:
 
     b.  Integrated 200W Amp to external monitor speaker
 
-![Diagram](./home-practice-rig.svg)
+![Diagram](./rigs/home/home-practice-rig-simplified.svg)
+
+With Software Routing and DAW configuration:
+
+![Diagram](./rigs/home/studio-rig-diagram.svg)
+
+Loopback configuration:
+
+![Diagram](./rigs/home/loopback-configuration.png)
 
 Really what I'm doing here is using the ELF configuration as a monitor that I could potential use if playing with a few others.
 
@@ -95,7 +115,7 @@ and sounds pretty good through the PA mains and subs.
 
     b.  Internal routing preamp to 400W amp for internal speaker, 800W external
 
-![Diagram](./group-practice-live-rig.svg)
+![Diagram](./rigs/live/group-practice-live-rig.svg)
 
 ### Benefits
 
@@ -124,7 +144,7 @@ and sounds pretty good through the PA mains and subs.
 
     b.  Preamp headphones out (for practice)
 
-![Diagram](./generic-di-rig.svg)
+![Diagram](./rigs/generic/generic-di-rig.svg)
 
 ### Benefits
 
