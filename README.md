@@ -1,4 +1,4 @@
-# Rigs
+# Bass Rigs
 
 This project documents bass rigs I use for practice and live.
 
