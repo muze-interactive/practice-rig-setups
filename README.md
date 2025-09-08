@@ -189,7 +189,8 @@ I use software DAWs on Mac platform for recording and export of sound files.
 
 In the previous diagrams,
 you'll see for the most part that DAW integration is shown at the DI output level.
-But in some circumstances, I route the bass input signal directly from the effects chain via USB (for example, the HX Stomp).
+I generally avoid routing from the effects chain via USB (i.e. HX Stomp),
+as makes the configuration inconsistent and may introduce more latency.
 
 I also factor in recording multiple tracks for learning purposes:
 
