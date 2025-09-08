@@ -48,6 +48,10 @@ Let's get into rigs:
 
 ![Diagram](./rigs/portable/portable-rig-diagram.svg)
 
+### Video
+
+iPad or iPhone, manual publishing
+
 ## Home Studio Rig
 
 ### Rig configuration
@@ -83,6 +87,29 @@ More on that later.
 Either way, the point is I can hear myself play with zero regard to downstream
 latency.
 
+### Video
+
+Video rig as follows:
+
+1.  Cameras:
+    -   Logitech MX Brio: main camera, zoom/pan
+    -   Logitech C930c: backup camera, or 2nd camera
+        when multiple needed (i.e. filming plucking and fretting hand separately).
+
+2.  Video software:
+    - Zoom record to cloud
+    - OBS (can be used for streaming)
+    - Camtasia (also used for video editing)
+
+3.  Publishing platforms:
+    - YouTube (unlisted during draft/editing)
+    - Zoom Cloud Recording
+    - Dropbox/Google/OneDrive
+
+Note the Audio Routing is required to aggregate sources
+of audio from software and/or ADDACs.
+Loopback selected for ease of use.
+
 ### Benefits
 
 -   Flexible, can stay really simple with just direct to ELF with minimal-to-no-effects
@@ -93,17 +120,16 @@ latency.
 
 -   The flexibility aspect also means the DAW integration might change dependent
     on where to tap off of the signal chain (could be the HX Stomp USB, SanAmp DI, etc).
--   Small wattage for practice amp, may not be suitable for jamming with multi-piece
-    band.
+-   Small wattage for practice amp, may not be suitable for jamming in large
+    practice venue.
 
 ## Group Practice/Simple Live Rig
 
-I've run my Precision and Ibanez SR basses through it
-and sounds pretty good through the PA mains and subs.
+I've run my Precision, Sterling MM and Ibanez SR basses through it and sounds pretty good through the PA mains and subs.
 
 ### Rig configuration
 
-1.  Active Bass
+1.  Active/Passive Bass
 
 2.  HX Stomp and/or Analog Pedalboard
 
