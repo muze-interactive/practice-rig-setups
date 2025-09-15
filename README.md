@@ -119,7 +119,7 @@ Loopback selected for ease of use.
 ### Tradeoffs
 
 -   The flexibility aspect also means the DAW integration might change dependent
-    on where to tap off of the signal chain (could be the HX Stomp USB, SanAmp DI, etc).
+    on where to tap off of the signal chain (could be the HX Stomp USB, EBS Microbass/DI, SansAmp DI, etc).
 -   Small wattage for practice amp, may not be suitable for jamming in large
     practice venue.
 
