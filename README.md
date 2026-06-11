@@ -36,15 +36,21 @@ DAW integration is interesting with all of this, but will cover that after.
 
 Let's get into rigs:
 
-## Minimalist Portable Practice Rig
+## Portable Practice Rig
 
 ### Rig configuration
 
-1.  Passive or Active Bass (onboard EQ) - Favor EHB
+Essentially the same software stack as the Home Studio Recording Configuration — Loopback for routing, Logic Pro as DAW, FX handled in the box — just with a more portable A/D interface and headphones-only monitoring.
 
-2.  Apogee Jam AD/DA
+1.  Passive or Active Bass (onboard EQ) — Favor EHB
 
-3.  iPad
+2.  Direct to Apogee Jam or Apogee Duet (instrument input)
+
+3.  MacBook Pro
+
+4.  Software Routing (Loopback) and DAW (Logic Pro) configuration — same as the Home Studio, FX handled in the DAW
+
+5.  Headphones (via Apogee headphone out)
 
 ![Diagram](./rigs/portable/portable-rig-diagram.svg)
 
@@ -54,7 +60,7 @@ iPad or iPhone, manual publishing
 
 ## Home Studio Rig
 
-### Rig configuration
+### Practice Rig
 
 1.  Passive or Active Bass (onboard EQ)
 
@@ -86,6 +92,54 @@ More on that later.
 
 Either way, the point is I can hear myself play with zero regard to downstream
 latency.
+
+### Recording Configuration
+
+The idea here is to practice and record dry, then think about FX during mixing and mastering. No analog effects chain, no Trace Elliot ELF — just a clean signal into the DAW where I have full flexibility over tone shaping after the fact.
+
+1.  Passive or Active Bass (onboard EQ)
+
+2.  Direct to Focusrite Scarlett 4i4 (instrument input)
+
+3.  Software Routing (Loopback) and DAW (Logic Pro) configuration — same as the Practice Rig, FX handled in the DAW
+
+4.  Scarlett outputs:
+
+    a.  Adam 5 studio monitors
+
+    b.  Audio Technica headphones
+
+![Diagram](./rigs/home/recording-rig-diagram.svg)
+
+The Loopback/Logic Pro routing is identical to the Practice Rig — the difference is on the input side (no FX chain, no ELF DI; bass goes straight into the Scarlett instrument input) and on the output side (no ELF monitor cab; Adam F5 monitors and headphones only).
+
+#### Notes on DAW integration
+
+I use software DAWs on Mac platform for recording and export of sound files.
+
+In the Practice Rig diagrams above, DAW integration is shown at the DI output level. I generally avoid routing from the effects chain via USB (i.e. HX Stomp), as it makes the configuration inconsistent and may introduce more latency. This Recording Configuration leans into that principle further — it captures the bass dry at the interface and defers all FX, amp/IR simulation, and tone shaping to the DAW.
+
+I also factor in recording multiple tracks for learning purposes:
+
+1.  The bass (obviously)
+
+2.  Backing track (usually provided by SBL, but could be one I source independently, i.e. "Sittin' at the Dock of the Bay")
+
+#### Benefits
+
+-   Clean, dry takes — maximum flexibility for mixing and mastering decisions later
+-   Simplified signal path, fewer variables to manage during a take
+-   Encourages separating practice/performance from tone shaping
+
+#### Tradeoffs
+
+-   No analog monitor cab — monitors and headphones only
+-   Requires more discipline around mixing/mastering to get a finished sound
+-   Less immediate "feel" without the FX chain coloring the performance
+
+#### Important considerations
+
+TBD
 
 ### Video
 
@@ -182,22 +236,3 @@ I've run my Precision, Sterling MM and Ibanez SR basses through it and sounds pr
 
 -   Completely reliant on venue for PA
 -   Preamp Amp/IR configuration may not work well with venue PA system
-
-## Recording configurations
-
-I use software DAWs on Mac platform for recording and export of sound files.
-
-In the previous diagrams,
-you'll see for the most part that DAW integration is shown at the DI output level.
-I generally avoid routing from the effects chain via USB (i.e. HX Stomp),
-as makes the configuration inconsistent and may introduce more latency.
-
-I also factor in recording multiple tracks for learning purposes:
-
-1.  The bass (obviously)
-
-2.  Backing track (usually provided by SBL, but could be one I source independently, i.e. "Sittin' at the Dock of the Bay").
-
-### Important considerations
-
-TBD

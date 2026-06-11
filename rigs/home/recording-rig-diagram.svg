@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" width="1400" height="700" font-family="Inter, Helvetica, Arial, sans-serif" stroke="#000" stroke-width="2" fill="none">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000" />
+    </marker>
+    <style><![CDATA[
+      .label{fill:#000;font-size:20px;text-anchor:middle;dominant-baseline:middle;}
+      .sublabel{fill:#000;font-size:16px;text-anchor:middle;dominant-baseline:middle;}
+      .portlabel{fill:#000;font-size:14px;text-anchor:start;dominant-baseline:middle;}
+      .box{fill:#fff;stroke:#000;stroke-width:2;rx:12;ry:12;}
+      .dotted{stroke-dasharray:6 6;}
+      .title{fill:#000;font-size:24px;font-weight:bold;text-anchor:middle;dominant-baseline:middle;stroke:none;}
+    ]]></style>
+  </defs>
+
+  <text class="title" x="700" y="40">Home Studio — Recording Configuration (Dry, DAW FX)</text>
+
+  <!-- ========= HARDWARE ROW ========= -->
+  <!-- Bass -->
+  <g id="bass" transform="translate(140,300)">
+    <rect class="box" x="-80" y="-40" width="160" height="80"/>
+    <text class="label" x="0" y="0">Bass</text>
+  </g>
+
+  <!-- Focusrite Scarlett -->
+  <g id="scarlett" transform="translate(520,300)">
+    <rect class="box" x="-150" y="-50" width="300" height="100"/>
+    <text class="label" x="0" y="-4">Focusrite Scarlett 4i4</text>
+    <text class="sublabel" x="0" y="24">USB Audio Interface</text>
+  </g>
+
+  <!-- MacBook Pro -->
+  <g id="mac" transform="translate(900,300)">
+    <rect class="box" x="-130" y="-50" width="260" height="100"/>
+    <text class="label" x="0" y="0">MacBook Pro</text>
+  </g>
+
+  <!-- Adam F5 Monitors -->
+  <g id="adam" transform="translate(380,540)">
+    <rect class="box" x="-140" y="-60" width="280" height="120"/>
+    <text class="label" x="0" y="-8">Adam F5</text>
+    <text class="sublabel" x="0" y="24">Studio Monitors (L/R)</text>
+  </g>
+
+  <!-- Headphones -->
+  <g id="headphones" transform="translate(700,540)">
+    <rect class="box" x="-130" y="-50" width="260" height="100"/>
+    <text class="label" x="0" y="0">Headphones</text>
+    <text class="sublabel" x="0" y="26">(Audio‑Technica)</text>
+  </g>
+
+  <!-- ========= SOFTWARE CALLOUT ========= -->
+  <g id="software" transform="translate(900,100)">
+    <rect class="box dotted" x="-220" y="-60" width="440" height="260"/>
+    <text class="label" x="0" y="-30">Mac Software Routing</text>
+
+    <!-- Mac Apps group -->
+    <g id="macapps" transform="translate(-120,20)">
+      <rect class="box" x="-90" y="-30" width="180" height="60"/>
+      <text class="sublabel" x="0" y="-4">Mac Apps</text>
+      <text class="portlabel" x="-80" y="16">Anytune / Moises / Browser</text>
+    </g>
+
+    <!-- Loopback RecordingRouter -->
+    <g id="loopback" transform="translate(0,90)">
+      <rect class="box" x="-100" y="-40" width="200" height="80"/>
+      <text class="sublabel" x="0" y="-8">Loopback</text>
+      <text class="sublabel" x="0" y="16">RecordingRouter</text>
+    </g>
+
+    <!-- Logic Pro DAW -->
+    <g id="logic" transform="translate(120,20)">
+      <rect class="box" x="-90" y="-30" width="180" height="60"/>
+      <text class="sublabel" x="0" y="-4">Logic Pro</text>
+      <text class="portlabel" x="-80" y="16">DAW (FX, mix, master)</text>
+    </g>
+  </g>
+
+  <!-- ========= SIGNAL LINES ========= -->
+  <!-- Bass direct to Scarlett (instrument in) -->
+  <line x1="220" y1="300" x2="370" y2="300" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="240" y="286">1/4" TS (Instrument In)</text>
+
+  <!-- Scarlett to Mac (USB) -->
+  <line x1="670" y1="300" x2="770" y2="300" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="690" y="286">USB‑C</text>
+
+  <!-- Scarlett to Adam F5 -->
+  <line x1="460" y1="350" x2="400" y2="480" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="380" y="420">Line Out 1–2</text>
+
+  <!-- Scarlett to Headphones -->
+  <line x1="580" y1="350" x2="700" y2="480" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="640" y="420">HP Out</text>
+
+  <!-- ===== Software internal lines ===== -->
+  <!-- Mac Apps to Loopback -->
+  <line x1="800" y1="120" x2="840" y2="160" marker-end="url(#arrow)"/>
+
+  <!-- Scarlett input feed into Loopback (virtual) -->
+  <line x1="900" y1="250" x2="900" y2="170" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="910" y="210">Scarlett Inputs</text>
+
+  <!-- Loopback to Logic Pro -->
+  <line x1="900" y1="190" x2="1010" y2="120" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="960" y="150">Ch 1–4</text>
+
+  <!-- Loopback Monitor back to Scarlett -->
+  <line x1="900" y1="190" x2="900" y2="290" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="785" y="240">Monitor Mix</text>
+
+  <!-- Logic Pro playback to Scarlett (device out) -->
+  <line x1="1010" y1="120" x2="1010" y2="290" marker-end="url(#arrow)"/>
+  <text class="portlabel" x="1020" y="210">Playback</text>
+
+</svg>
