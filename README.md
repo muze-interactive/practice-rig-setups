@@ -67,7 +67,9 @@ rig and where each tends to sit in the signal chain:
    - Exposes channels to the workstation for routing.
 
 6. **Workstation** — the host computer and its audio routing:
-   - **Virtual router** (Loopback on Mac) aggregates and routes sources:
+   - **Virtual router** (Loopback on Mac) aggregates and routes sources — see the
+     [Loopback configuration & backup guide](./rigs/home/loopback-configuration-guide.md)
+     and the [router layout](./rigs/home/loopback-configuration.png):
      - Backing-track sources route to a stereo output pair.
      - Instrument inputs from the ADDAC route to separate output pairs.
      - A monitor mix sends the combined output back to the ADDAC for audio.
@@ -218,3 +220,8 @@ Two primary reasons drive these:
   single device with integrated cab sim *and* ground lift would replace both the HX
   Stomp and the DI box — the current ELF/GK DI solution is a hack, especially when
   traveling without the monitor setup.
+
+## Reference
+
+- [Sample bill of materials](./rigs/home/studio-rig-bom.md) — representative gear,
+  software, cabling, and ballpark costs across the setups above.

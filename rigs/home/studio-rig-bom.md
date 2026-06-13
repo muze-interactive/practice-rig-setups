@@ -1,18 +1,20 @@
-# Home Music Studio Rig - Bill of Materials
+# Rigs - Sample Bill of Materials
 
 ## Hardware Components
 
 ### Instruments & Effects
+
 | Item | Model | Approx. Price | Purpose | Notes |
 |------|-------|---------------|---------|-------|
 | Bass Guitar | Active/Passive | $500-2000 | Primary instrument | Various options available |
-| FX Chain | Pedalboard OR HX Stomp | $200-1500 | Effects processing | HX Stomp provides digital modeling |
+| FX Chain | Pedalboard OR HX Stomp | $200-2000 | Effects processing | HX Stomp, Anagram, Neural DSP provides digital modeling |
 | Instrument Cables | TS 1/4" | $20-50 each | Signal transmission | High-quality shielded cables recommended |
 
 ### Amplification & Processing
 | Item | Model | Approx. Price | Purpose | Notes |
 |------|-------|---------------|---------|-------|
-| Preamp/Combo | Trace Elliot ELF | $800-1200 | Amplification & DI | 200W, built-in EQ & compression |
+| Preamp/Combo | Trace Elliot ELF & 10" Cab | $700-800 | Amplification & DI | 200W, built-in EQ & compression |
+| Preamp/Combo | GK Fusion 112 Combo | $1800-1900 | Amplification & DI | 400/800W, built-in EQ & compression |
 | XLR Cable | Balanced | $30-80 | DI to interface | Professional grade recommended |
 
 ### Audio Interface
