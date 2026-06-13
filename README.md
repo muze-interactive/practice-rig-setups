@@ -1,238 +1,220 @@
 # Bass Rigs
 
-This project documents bass rigs I use for practice and live.
+This project documents the rigs I use on bass — for practice, performance, and
+content creation. The concepts apply to other instruments (guitar, keys, etc.),
+but the specifics here are bass-focused.
 
-## General Signal Chain
+It starts with a **general framework** that describes the components a rig can
+contain as concepts, then lays out the **three setups** I actually run —
+[Home Studio](#home-studio-rig), [Travel Practice / Jam](#travel-practice--jam-rig),
+and [Performance](#performance-rig) — each with a diagram and its benefits and
+tradeoffs. A [Future Directions](#future-directions) section covers what may
+change the setups going forward.
 
-The signal chain includes the following:
+## Objectives
 
-1.  Instrument (Bass)
+### Practice
 
-2.  Effects chain - Compression, chorus, reverb, pitch shifting, etc
+A practice regimen requires:
 
-3.  Preamp/EQ - Amp and Cab (Impulse Response, or IR for short) simulation
+- The ability to play and clearly hear what I'm playing
+- Playing with or against some form of backing track (or metronome)
 
-4.  Preamp out:
+The ability to record is useful for:
 
-    a.  DI (mains are not part of my rigs, AWS is)
+- Sharing with others (e.g. an instructor)
+- Self-review
 
-    b.  Amp for monitor
+### Performance
 
-It is important to note the lines can be blurred between #2 and 3,
-as some devices play the role of both.  The HX Stomp as an example,
-can provide most of the components for effects, amp/ir simulation
-all via software, in a single box.
+The point of performance is to play well and sound good for others — working
+with venues' sound engineers and their platforms.
 
-I used to run BOSS EQ pedal with my passive basses before getting into the
-Amp/IR simulation (like the SansAmp)
+### Content Creation and Music Production
 
-I've been experimenting with the HX Stomp, and really digging Ian's preset
-bundles. They are very simple, and very clean, as compared to some of the other Line 6 store contenders, that are (IMO) unnecessarily complex, and the sound shows.
+Content creation includes building instrument tracks as part of song
+construction. Instrument and gear choices help craft the tone a song demands.
 
-On the other hand, for live preparation/group practice/gig, I'm not using it yet,
-staying simple with GK preamp, maybe with a small MXR compression pedal at the beginning of the effects chain.
+This leans on sound engineering and music production skills, built through
+iterative experimentation with gear (on top of proficiency on the instrument).
+Gear gets expensive though — GAS is real — so the setups below favor a small
+number of flexible, reusable components over sprawl.
 
-DAW integration is interesting with all of this, but will cover that after.
+## Rig Framework
 
-Let's get into rigs:
+Before the specific setups, it's useful to describe what components can sit in a
+rig and where each tends to sit in the signal chain:
 
-## Portable Practice Rig
+1. **Instrument** — the bass.
 
-### Rig configuration
+2. **FX** — effects, which may include:
+   - Dynamics (compression)
+   - Distortion / overdrive
+   - Modulation
+   - EQ / filtering
+   - Time / spatial (delay, reverb)
+   - Pitch / harmony
 
-Essentially the same software stack as the Home Studio Recording Configuration — Loopback for routing, Logic Pro as DAW, FX handled in the box — just with a more portable A/D interface and headphones-only monitoring.
+3. **Preamp / Amp** — tone shaping and amplification, optionally with **IR / cab**
+   simulation.
 
-1.  Passive or Active Bass (onboard EQ) — Favor EHB
+4. **DI** — feeds Front-of-House (FOH) PA.
 
-2.  Direct to Apogee Jam or Apogee Duet (instrument input)
+5. **ADDAC** (A/D–D/A converter — device + software driver) — the audio interface:
+   - Inputs from the signal chain (the instrument can bypass upstream gear and go
+     direct here), typically 2–4 channels.
+   - Outputs (2–4 channels) to studio monitors and/or headphones.
+   - Exposes channels to the workstation for routing.
 
-3.  MacBook Pro
+6. **Workstation** — the host computer and its audio routing:
+   - **Virtual router** (Loopback on Mac) aggregates and routes sources:
+     - Backing-track sources route to a stereo output pair.
+     - Instrument inputs from the ADDAC route to separate output pairs.
+     - A monitor mix sends the combined output back to the ADDAC for audio.
+   - **Backing-track sources** feeding the router:
+     - *Live* — browser streaming, gaming, or streaming software.
+     - *Pre-recorded* — music/video players, DAW, browser/app-based.
 
-4.  Software Routing (Loopback) and DAW (Logic Pro) configuration — same as the Home Studio, FX handled in the DAW
+   The goal is to keep routing simple so software processors (DAWs, streaming/
+   recording) have a consistent set of inputs to work from.
 
-5.  Headphones (via Apogee headphone out)
+7. **Signal processors** (running on the workstation):
+   - **Recording software** — simple live capture (e.g. QuickTime) for quick shares.
+   - **DAW** (Logic Pro on Mac) — edit, mix, master. Pre-recorded backing tracks
+     import directly as audio; instrument and backing tracks can also be recorded
+     live. **DAW plugins (VSTs) can supply FX, preamp, amp and IR** inside the box,
+     which changes what physically needs to be in the signal chain.
+   - **OBS** — video capture, streaming, recording. Sources include the display,
+     web cams, and any of the router outputs / monitor mix / external mics. Scenes
+     set up the video + audio layout.
 
-![Diagram](./rigs/portable/portable-rig-diagram.svg)
+> The lines between **FX (2)** and **Preamp/Amp (3)** blur, because some devices
+> play both roles. The HX Stomp, for example, provides FX *and* amp/IR simulation
+> in a single box.
 
-### Video
+The signal chain varies by setup — any of the components above may or may not be
+present depending on context. The three setups I run are below.
 
-iPad or iPhone, manual publishing
+## Setups
 
-## Home Studio Rig
+### Home Studio Rig
 
-### Practice Rig
+Optimized for practice and recording **dry** (no upstream FX). It can be used
+purely for practice, or for bass-track recording where FX are added to the dry
+track in the DAW.
 
-1.  Passive or Active Bass (onboard EQ)
+![Home Studio Rig diagram](./rigs/home/home-studio-rig.svg)
 
-2.  HX Stomp and/or Analog Pedalboard and/or SansAmp, or not at all
-
-3.  Trace Elliot ELF (onboard EQ Preamp and 200W Power amp)
-
-4.  Trace Elliot ELF outputs:
-
-    a.  DI preamp to DAW
-
-    b.  Integrated 200W Amp to external monitor speaker
-
-![Diagram](./rigs/home/home-practice-rig-simplified.svg)
-
-With Software Routing and DAW configuration:
-
-![Diagram](./rigs/home/studio-rig-diagram.svg)
-
-Loopback configuration:
-
-![Diagram](./rigs/home/loopback-configuration.png)
-
-Really what I'm doing here is using the ELF configuration as a monitor that I could potential use if playing with a few others.
-
-Depending on what I'm recording and why, I might go DI from the ELF to my DAW,
-or I might go from where the Amp/IR simulation is in the effects chain.
-More on that later.
-
-Either way, the point is I can hear myself play with zero regard to downstream
-latency.
-
-### Recording Configuration
-
-The idea here is to practice and record dry, then think about FX during mixing and mastering. No analog effects chain, no Trace Elliot ELF — just a clean signal into the DAW where I have full flexibility over tone shaping after the fact.
-
-1.  Passive or Active Bass (onboard EQ)
-
-2.  Direct to Focusrite Scarlett 4i4 (instrument input)
-
-3.  Software Routing (Loopback) and DAW (Logic Pro) configuration — same as the Practice Rig, FX handled in the DAW
-
-4.  Scarlett outputs:
-
-    a.  Adam 5 studio monitors
-
-    b.  Audio Technica headphones
-
-![Diagram](./rigs/home/recording-rig-diagram.svg)
-
-The Loopback/Logic Pro routing is identical to the Practice Rig — the difference is on the input side (no FX chain, no ELF DI; bass goes straight into the Scarlett instrument input) and on the output side (no ELF monitor cab; Adam F5 monitors and headphones only).
-
-#### Notes on DAW integration
-
-I use software DAWs on Mac platform for recording and export of sound files.
-
-In the Practice Rig diagrams above, DAW integration is shown at the DI output level. I generally avoid routing from the effects chain via USB (i.e. HX Stomp), as it makes the configuration inconsistent and may introduce more latency. This Recording Configuration leans into that principle further — it captures the bass dry at the interface and defers all FX, amp/IR simulation, and tone shaping to the DAW.
-
-I also factor in recording multiple tracks for learning purposes:
-
-1.  The bass (obviously)
-
-2.  Backing track (usually provided by SBL, but could be one I source independently, i.e. "Sittin' at the Dock of the Bay")
+- **Instrument** — typically an EHB-style bass with both active and passive
+  pickup/EQ options.
+- **FX** — usually none for practice (instrument goes direct to the ADDAC, dry).
+  An HX Stomp is inserted when experimenting with or crafting tones — though FX
+  can equally be handled in the DAW (see below).
+- **ADDAC** — Focusrite Scarlett 4i4 (Gen 3), out to **Adam F5** studio monitors
+  and Audio-Technica wired headphones.
+- **Workstation** — a **Mac Mini** hosts the workstation, with **Loopback** as the
+  virtual router.
+- **Capture** — QuickTime (quick shares), Logic Pro (recording / backing tracks,
+  with FX added downstream of the dry track via VSTs), and OBS (audio + video
+  performance recording).
 
 #### Benefits
 
--   Clean, dry takes — maximum flexibility for mixing and mastering decisions later
--   Simplified signal path, fewer variables to manage during a take
--   Encourages separating practice/performance from tone shaping
+- Clean, dry takes — maximum flexibility for mixing/mastering decisions later.
+- Simplified signal path; fewer variables to manage during a take.
+- Best monitoring of the three setups (studio monitors + quality headphones).
+- Encourages separating the performance from the tone shaping.
 
 #### Tradeoffs
 
--   No analog monitor cab — monitors and headphones only
--   Requires more discipline around mixing/mastering to get a finished sound
--   Less immediate "feel" without the FX chain coloring the performance
+- Fixed location — the least portable setup.
+- Requires discipline around mixing/mastering to land a finished sound.
+- Less immediate "feel" without an FX chain coloring the performance.
 
-#### Important considerations
+> **Deep dives:** [Setup guide](./rigs/home/studio-rig-setup-guide.md) ·
+> [Bill of materials](./rigs/home/studio-rig-bom.md) ·
+> [Loopback configuration & backup](./rigs/home/loopback-configuration-guide.md)
+> (router layout shown in [loopback-configuration.png](./rigs/home/loopback-configuration.png)).
 
-TBD
+### Travel Practice / Jam Rig
 
-### Video
+A general-purpose, minimal setup that isn't optimized for any single objective —
+it trades quality and screen space for portability.
 
-Video rig as follows:
+![Travel Practice / Jam Rig diagram](./rigs/travel/travel-rig.svg)
 
-1.  Cameras:
-    -   Logitech MX Brio: main camera, zoom/pan
-    -   Logitech C930c: backup camera, or 2nd camera
-        when multiple needed (i.e. filming plucking and fretting hand separately).
+- **Instrument** — typically an EHB-style bass with active/passive options.
+- **FX + Preamp + ADDAC** — a **Line6 HX Stomp** does all three: FX, a rudimentary
+  preamp/amp-IR, and the USB audio interface. Its **headphone out** provides a
+  zero-latency monitoring path for practice/performance.
+- **Workstation** — a **MacBook Air** hosts the workstation, with **Loopback** as
+  the virtual router.
+- **Capture** — QuickTime, Logic Pro, and OBS, same as the Home Studio.
 
-2.  Video software:
-    - Zoom record to cloud
-    - OBS (can be used for streaming)
-    - Camtasia (also used for video editing)
+#### Benefits
 
-3.  Publishing platforms:
-    - YouTube (unlisted during draft/editing)
-    - Zoom Cloud Recording
-    - Dropbox/Google/OneDrive
+- Highly portable — collapses to a bass, one box, a laptop, and headphones.
+- All-in-the-box FX/amp/IR; presets travel with you.
+- Headphone-out path removes USB latency during practice.
 
-Note the Audio Routing is required to aggregate sources
-of audio from software and/or ADDACs.
-Loopback selected for ease of use.
+#### Tradeoffs
 
-### Benefits
+- Audio quality compromise (headphones over monitors; small box over dedicated gear).
+- Latency disparity between the direct headphone path and the USB/DAW path.
+- Limited CPU can reduce audio streaming/sampling quality.
+- Limited screen real estate.
 
--   Flexible, can stay really simple with just direct to ELF with minimal-to-no-effects
-    or insert and play around with different effects chains easily.
--   Small setup, portable
+### Performance Rig
 
-### Tradeoffs
+Built to sound good for gigs and to stay flexible with venue sound systems and
+constraints.
 
--   The flexibility aspect also means the DAW integration might change dependent
-    on where to tap off of the signal chain (could be the HX Stomp USB, EBS Microbass/DI, SansAmp DI, etc).
--   Small wattage for practice amp, may not be suitable for jamming in large
-    practice venue.
+![Performance Rig diagram](./rigs/performance/performance-rig.svg)
 
-## Group Practice/Simple Live Rig
+- **Instruments** — usually a couple of traditional-style basses with onboard
+  active pickups for tonal/EQ options. This keeps tone control at the bass, though
+  it's rarely needed.
+- **FX** — a Line6 HX Stomp, or a simple compressor (MXR mini series).
+- **Preamp / Amp / DI** — a **Trace Elliot ELF** serves as preamp, monitor amp, and
+  FOH DI, paired with a **TE 10" cab**. For outdoor venues where the TE can be a
+  little weak, a **GK Fusion 112** combo chains off the TE's DI out and acts as an
+  extended monitor — the TE 10" + GK 12" together make a clear (if unorthodox)
+  monitor combo. The GK preamp's DI can run in **pre** mode (bypassing the GK
+  preamp) for a more transparent FOH sound if the engineer prefers.
+- **Capture** — not currently used for live gigs, though a more formal venue/band
+  capture for live recordings (with extended mixing and DAW input) may be designed
+  in later.
 
-I've run my Precision, Sterling MM and Ibanez SR basses through it and sounds pretty good through the PA mains and subs.
+#### Benefits
 
-### Rig configuration
+- Self-contained monitoring (ELF + cab) plus a clean FOH DI feed.
+- Flexible with venues — DI to mains, drive a stage monitor, or both.
+- Scales up: chain the GK combo for bigger/outdoor stages.
 
-1.  Active/Passive Bass
+#### Tradeoffs
 
-2.  HX Stomp and/or Analog Pedalboard
+- Worst portability of the three; the ELF/GK DI chaining is a hack — hard to bring
+  the full monitor setup when traveling to gigs/jams.
+- The ELF/GK DI tone may not suit every venue PA.
+- No live capture path today.
 
-3.  GK Fusion 112 (onboard EQ, preamp, and power amp)
+## Future Directions
 
-4.  GK Fusion 112 outputs:
+A few directions under research could change the setups above:
 
-    a.  DI preamp to mains
+1. Replace the Line6 HX Stomp with a **Neural DSP Quad Cortex** or **Darkglass
+   Anagram**.
+2. Transition the workstation from macOS to a **Linux** platform.
+3. Switch the DAW from Logic Pro to **Reaper**.
 
-    b.  Internal routing preamp to 400W amp for internal speaker, 800W external
+Two primary reasons drive these:
 
-![Diagram](./rigs/live/group-practice-live-rig.svg)
-
-### Benefits
-
--   Simple
--   Good for practice/jamming with a multi-piece band
--   Flexible venue support - Drive PA through DI/mains, or ability to drive external cabs
-
-### Tradeoffs
-
--   GK DI/Amp may not be the right sound for some venues
--   Worst portability out of the list
-
-## Generic DI Rig
-
-### Rig configuration
-
-1.  Active or Passive Bass (EQ Pretuned)
-
-2.  HX Stomp and/or Analog Pedalboard
-
-3.  DI Preamp (such as Tech 21 SansAmp or EBS Microbass, may provides Amp/IR simulation)
-
-4.  DI Preamp outputs to PA mains:
-
-    a.  DI preamp to mains (supplied by venue)
-
-    b.  Preamp headphones out (for practice)
-
-![Diagram](./rigs/generic/generic-di-rig.svg)
-
-### Benefits
-
--   Highly portable - out of a single bag
--   Highly flexible, depending on DI/Preamp selected
--   Ideal for headphones/travel practice
-
-### Tradeoffs
-
--   Completely reliant on venue for PA
--   Preamp Amp/IR configuration may not work well with venue PA system
+- **Mac platform obsolescence for audio gear.** In late 2026, Apple drops Rosetta
+  Intel emulation. It's questionable whether Apogee or Focusrite will ship Apple
+  Silicon drivers, Logic Pro is Mac-only, and Reaper runs well on SteamOS/Linux —
+  which opens interesting options for live recording.
+- **Simplifying live rigs.** Modern software FX + preamp/amp/IR modelers fit in one
+  device (the HX Stomp already does this), simplifying workflow and presets. A
+  single device with integrated cab sim *and* ground lift would replace both the HX
+  Stomp and the DI box — the current ELF/GK DI solution is a hack, especially when
+  traveling without the monitor setup.

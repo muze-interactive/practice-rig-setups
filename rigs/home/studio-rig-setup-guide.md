@@ -6,7 +6,7 @@
 - [ ] Bass → FX Chain (TS cable)
 - [ ] FX Chain → Trace Elliot ELF (TS cable)
 - [ ] ELF DI → Scarlett Input 1 (XLR cable)
-- [ ] Scarlett → MacBook Pro (USB-C cable)
+- [ ] Scarlett → Mac Mini (USB-C cable)
 - [ ] Scarlett Outputs 1-2 → Adam 5 Monitors (XLR→TS cables)
 - [ ] Scarlett Headphone → Audio Technica Headphones (TRS cable)
 - [ ] ELF Speaker Out → Monitor Cab (TS cable)

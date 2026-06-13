@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 620" width="1060" height="620">
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="7.5" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L9 4 L0 8 z" fill="#374151"/>
+    </marker>
+    <style><![CDATA[
+      .title{font:600 24px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#111827;}
+      .sub  {font:400 14px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#6b7280;}
+      .l    {font:600 16px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#111827;text-anchor:middle;}
+      .s    {font:400 13px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#4b5563;text-anchor:middle;}
+      .p    {font:500 12px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#6b7280;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:5;stroke-linejoin:round;}
+      .flow {stroke:#374151;stroke-width:2;fill:none;}
+      .opt  {stroke-dasharray:5 5;}
+      .panel{fill:#f9fafb;stroke:#d1d5db;stroke-width:1.5;stroke-dasharray:6 5;}
+    ]]></style>
+  </defs>
+
+  <text class="title" x="40" y="48">Home Studio Rig</text>
+  <text class="sub"   x="40" y="72">Practice + dry recording — instrument straight into the interface, FX deferred to the DAW</text>
+
+  <!-- Software panel -->
+  <rect class="panel" x="690" y="110" width="330" height="120" rx="14"/>
+  <text class="s" x="855" y="135" font-weight="600" fill="#374151">Mac Mini — Software</text>
+  <text class="p" x="855" y="160">Loopback (virtual router)</text>
+  <text class="p" x="855" y="180">Logic Pro · QuickTime · OBS</text>
+  <text class="p" x="855" y="205">Backing tracks: Anytune · Moises · Browser</text>
+
+  <!-- HX Stomp (optional branch) -->
+  <g>
+    <rect x="250" y="150" width="170" height="76" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+    <text class="l" x="335" y="182">HX Stomp</text>
+    <text class="s" x="335" y="204">optional — tone crafting</text>
+  </g>
+
+  <!-- Bass -->
+  <rect x="50" y="290" width="130" height="80" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text class="l" x="115" y="325">Bass</text>
+  <text class="s" x="115" y="347">EHB (active/passive)</text>
+
+  <!-- Scarlett -->
+  <rect x="450" y="285" width="210" height="90" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text class="l" x="555" y="320">Focusrite Scarlett 4i4</text>
+  <text class="s" x="555" y="343">USB audio interface</text>
+
+  <!-- Mac Mini -->
+  <rect x="755" y="285" width="200" height="90" rx="10" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+  <text class="l" x="855" y="328">Mac Mini</text>
+  <text class="s" x="855" y="350">workstation host</text>
+
+  <!-- Adam F5 -->
+  <rect x="450" y="470" width="210" height="86" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text class="l" x="555" y="505">Adam F5 Monitors</text>
+  <text class="s" x="555" y="527">stereo L/R</text>
+
+  <!-- Headphones -->
+  <rect x="755" y="470" width="200" height="86" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text class="l" x="855" y="505">Headphones</text>
+  <text class="s" x="855" y="527">Audio-Technica (wired)</text>
+
+  <!-- Bass -> Scarlett (direct, dry) -->
+  <line class="flow" x1="180" y1="330" x2="450" y2="330" marker-end="url(#arr)"/>
+  <text class="p" x="315" y="320">instrument · dry · TS</text>
+
+  <!-- Bass -> HX Stomp (branch up) -->
+  <path class="flow opt" d="M180 305 Q215 250 250 200" marker-end="url(#arr)"/>
+  <!-- HX Stomp -> Scarlett -->
+  <path class="flow opt" d="M420 200 Q470 245 500 285" marker-end="url(#arr)"/>
+
+  <!-- Scarlett <-> Mac Mini (USB, bidirectional monitor) -->
+  <line class="flow" x1="660" y1="330" x2="755" y2="330" marker-end="url(#arr)"/>
+  <text class="p" x="707" y="320">USB-C</text>
+
+  <!-- Mac Mini -> software panel -->
+  <line class="flow" x1="855" y1="285" x2="855" y2="232" marker-end="url(#arr)"/>
+
+  <!-- Scarlett -> Adam -->
+  <line class="flow" x1="555" y1="375" x2="555" y2="470" marker-end="url(#arr)"/>
+  <text class="p" x="555" y="428">line out 1–2</text>
+
+  <!-- Scarlett -> Headphones -->
+  <path class="flow" d="M640 375 Q760 400 820 470" marker-end="url(#arr)"/>
+  <text class="p" x="760" y="415">HP out</text>
+</svg>

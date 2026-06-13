@@ -33,7 +33,7 @@
 ### Computer System
 | Item | Model | Approx. Price | Purpose | Notes |
 |------|-------|---------------|---------|-------|
-| Host Computer | MacBook Pro | $1200-3000 | Digital processing | M1/M2 chip recommended |
+| Host Computer | Mac Mini | $600-2000 | Digital processing | Apple Silicon recommended |
 | External Storage | SSD | $100-300 | Audio file storage | 1TB+ recommended |
 
 ## Software Components
