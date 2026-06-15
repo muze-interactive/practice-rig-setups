@@ -58,7 +58,10 @@ rig and where each tends to sit in the signal chain:
 3. **Preamp / Amp** — tone shaping and amplification, optionally with **IR / cab**
    simulation.
 
-4. **DI** — feeds Front-of-House (FOH) PA.
+4. **DI** — feeds Front-of-House (FOH) PA, and can tap a parallel thru feed for
+   on-stage / monitor amplification. A standalone passive DI (Radial JDI Jensen)
+   keeps the DI feed consistent across rigs and decouples it from whatever
+   monitor amp is in use that night.
 
 5. **ADDAC** (A/D–D/A converter — device + software driver) — the audio interface:
    - Inputs from the signal chain (the instrument can bypass upstream gear and go
@@ -109,9 +112,13 @@ track in the DAW.
 
 - **Instrument** — typically an EHB-style bass with both active and passive
   pickup/EQ options.
-- **FX** — usually none for practice (instrument goes direct to the ADDAC, dry).
-  An HX Stomp is inserted when experimenting with or crafting tones — though FX
-  can equally be handled in the DAW (see below).
+- **FX** — usually none for practice (instrument goes direct to the DI, dry). An
+  HX Stomp is inserted when experimenting with or crafting tones — though FX can
+  equally be handled in the DAW (see below).
+- **DI** — a **Radial JDI Jensen** passive DI sits downstream of the (optional)
+  FX chain. Its XLR DI out feeds the Scarlett; its 1/4" thru optionally feeds the
+  Trace Elliot ELF + 10" cab for an analog monitor (amp-room practice without
+  the workstation).
 - **ADDAC** — Focusrite Scarlett 4i4 (Gen 3), out to **Adam F5** studio monitors
   and Audio-Technica wired headphones.
 - **Workstation** — a **Mac Mini** hosts the workstation, with **Loopback** as the
@@ -176,28 +183,41 @@ constraints.
 - **Instruments** — usually a couple of traditional-style basses with onboard
   active pickups for tonal/EQ options. This keeps tone control at the bass, though
   it's rarely needed.
-- **FX** — a Line6 HX Stomp, or a simple compressor (MXR mini series).
-- **Preamp / Amp / DI** — a **Trace Elliot ELF** serves as preamp, monitor amp, and
-  FOH DI, paired with a **TE 10" cab**. For outdoor venues where the TE can be a
-  little weak, a **GK Fusion 112** combo chains off the TE's DI out and acts as an
-  extended monitor — the TE 10" + GK 12" together make a clear (if unorthodox)
-  monitor combo. The GK preamp's DI can run in **pre** mode (bypassing the GK
-  preamp) for a more transparent FOH sound if the engineer prefers.
+- **FX** — a Line6 HX Stomp (FX + preamp/IR), or a simple compressor (MXR mini
+  series).
+- **DI** — a **Radial JDI Jensen** passive DI sits downstream of the FX chain. Its
+  XLR DI out goes to FOH; its 1/4" thru drives whichever monitor amp(s) are on
+  stage. For gigs where carrying a combo isn't practical, only the JDI → FOH path
+  is needed.
+- **Monitor amp(s)** — three configurations, picked per venue:
+  1. **TE ELF + 10" cab only** — small indoor rooms / coffee-shop gigs.
+  2. **GK Fusion 112 only** — more headroom and stronger low end / stage presence,
+     trading some midrange clarity.
+  3. **TE ELF + GK Fusion 112 daisy-chained** — JDI thru into the TE ELF (driving
+     the 10" cab), then the ELF's DI out into the GK. Two variants:
+     - **GK Return** (preamp-bypass) when the HX Stomp is supplying FOH tone —
+       the most transparent monitor stack, leaning on HX Stomp presets for
+       character.
+     - **GK preamp input** when there's no FOH and the TE + GK are the only
+       amplification — keeps the GK preamp model in the chain.
 - **Capture** — not currently used for live gigs, though a more formal venue/band
   capture for live recordings (with extended mixing and DAW input) may be designed
   in later.
 
 #### Benefits
 
-- Self-contained monitoring (ELF + cab) plus a clean FOH DI feed.
-- Flexible with venues — DI to mains, drive a stage monitor, or both.
-- Scales up: chain the GK combo for bigger/outdoor stages.
+- Same Bass → FX → JDI signal path as the Home Studio — consistent tone, and one
+  fewer thing to relearn between contexts.
+- Decouples FOH from the monitor amps; can show up with no combo at all and still
+  hand FOH a clean, transparent DI feed.
+- Three monitor configurations to suit the room — small indoor, larger outdoor,
+  or daisy-chained for both clarity and headroom.
 
 #### Tradeoffs
 
-- Worst portability of the three; the ELF/GK DI chaining is a hack — hard to bring
-  the full monitor setup when traveling to gigs/jams.
-- The ELF/GK DI tone may not suit every venue PA.
+- Worst portability of the three; carrying both combos for the daisy-chain
+  config is hard on travel gigs.
+- More boxes on stage than a one-amp setup, plus an extra cable run for the JDI.
 - No live capture path today.
 
 ## Future Directions
@@ -217,9 +237,9 @@ Two primary reasons drive these:
   which opens interesting options for live recording.
 - **Simplifying live rigs.** Modern software FX + preamp/amp/IR modelers fit in one
   device (the HX Stomp already does this), simplifying workflow and presets. A
-  single device with integrated cab sim *and* ground lift would replace both the HX
-  Stomp and the DI box — the current ELF/GK DI solution is a hack, especially when
-  traveling without the monitor setup.
+  single device with integrated cab sim *and* ground lift would replace both the
+  HX Stomp and the JDI. Adopting the JDI was a step toward that end state — the
+  FOH feed already travels without a combo amp.
 
 ## Reference
 

@@ -10,12 +10,13 @@
 | FX Chain | Pedalboard OR HX Stomp | $200-2000 | Effects processing | HX Stomp, Anagram, Neural DSP provides digital modeling |
 | Instrument Cables | TS 1/4" | $20-50 each | Signal transmission | High-quality shielded cables recommended |
 
-### Amplification & Processing
+### DI, Amplification & Processing
 | Item | Model | Approx. Price | Purpose | Notes |
 |------|-------|---------------|---------|-------|
-| Preamp/Combo | Trace Elliot ELF & 10" Cab | $700-800 | Amplification & DI | 200W, built-in EQ & compression |
-| Preamp/Combo | GK Fusion 112 Combo | $1800-1900 | Amplification & DI | 400/800W, built-in EQ & compression |
-| XLR Cable | Balanced | $30-80 | DI to interface | Professional grade recommended |
+| Passive DI | Radial JDI Jensen (single channel) | $250-300 | DI to Scarlett / FOH | Shared with Performance rig; transformer-isolated, thru jack for monitor amp |
+| Preamp/Combo | Trace Elliot ELF & 10" Cab | $700-800 | Optional monitor amp | 200W; monitor only — no longer used as FOH DI |
+| Preamp/Combo | GK Fusion 112 Combo | $1800-1900 | Performance monitor amp | 400/800W; monitor only — no longer used as FOH DI |
+| XLR Cable | Balanced | $30-80 | JDI DI out to Scarlett / FOH | Professional grade recommended |
 
 ### Audio Interface
 | Item | Model | Approx. Price | Purpose | Notes |
@@ -61,25 +62,25 @@
 ### Required Cables
 | Type | Quantity | Approx. Price Each | Total | Purpose |
 |------|----------|-------------------|-------|---------|
-| TS Instrument Cable | 2 | $30 | $60 | Bass to FX, FX to preamp |
-| XLR Cable | 1 | $50 | $50 | Preamp DI to interface |
+| TS Instrument Cable | 3 | $30 | $90 | Bass→HX, HX→JDI (or Bass→JDI direct), JDI thru→ELF |
+| XLR Cable | 1 | $50 | $50 | JDI DI out to Scarlett / FOH |
 | USB-C Cable | 1 | $30 | $30 | Interface to host |
 | XLR→TS Speaker Cables | 2 | $40 | $80 | Interface to studio monitors |
 | TS Speaker Cable | 1 | $30 | $30 | ELF to monitor cab |
 | 1/4" TRS Cable | 1 | $20 | $20 | Interface to headphones |
-| **Total Cable Cost** | | | **$270** | |
+| **Total Cable Cost** | | | **$300** | |
 
 ## Total Investment Estimate
 
 ### Hardware Investment
 - **Instruments & Effects**: $700-3500
-- **Amplification**: $830-1280
+- **DI & Amplification**: $1080-1580
 - **Audio Interface**: $220-340
 - **Monitoring**: $860-1480
 - **Computer System**: $1300-3300
-- **Cables & Adapters**: $270
+- **Cables & Adapters**: $300
 
-**Total Hardware**: $4,580-10,170
+**Total Hardware**: $4,860-10,500
 
 ### Software Investment
 - **Core Software**: $300 (one-time)
@@ -88,7 +89,7 @@
 **Total Software**: $300-370 (initial)
 
 ### Grand Total
-**Complete Setup**: $4,880-10,540
+**Complete Setup**: $5,160-10,870
 
 ## Budget Options
 
@@ -121,11 +122,12 @@
 ## Recommendations
 
 ### Essential Components (Must Have)
-1. **Audio Interface**: Focusrite Scarlett 4i4 Gen 3
-2. **Virtual Router**: Loopback
-3. **DAW**: Logic Pro
-4. **Studio Monitors**: Adam 5 or equivalent
-5. **Quality Cables**: Professional grade
+1. **Passive DI**: Radial JDI Jensen — the consistent DI feed across rigs
+2. **Audio Interface**: Focusrite Scarlett 4i4 Gen 3
+3. **Virtual Router**: Loopback
+4. **DAW**: Logic Pro
+5. **Studio Monitors**: Adam 5 or equivalent
+6. **Quality Cables**: Professional grade
 
 ### Nice-to-Have Components
 1. **HX Stomp**: Digital modeling flexibility

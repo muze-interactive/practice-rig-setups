@@ -3,13 +3,14 @@
 ## Quick Start Checklist
 
 ### Hardware Connections
-- [ ] Bass → FX Chain (TS cable)
-- [ ] FX Chain → Trace Elliot ELF (TS cable)
-- [ ] ELF DI → Scarlett Input 1 (XLR cable)
+- [ ] Bass → JDI input (TS cable) — direct when not crafting tones
+- [ ] Bass → HX Stomp → JDI input (TS cables) — optional, when crafting tones
+- [ ] JDI DI out → Scarlett Input 1 (XLR cable)
+- [ ] JDI thru → Trace Elliot ELF input (TS cable) — optional, for analog monitor
+- [ ] ELF Speaker Out → 10" Monitor Cab (TS cable) — optional, paired with above
 - [ ] Scarlett → Mac Mini (USB-C cable)
-- [ ] Scarlett Outputs 1-2 → Adam 5 Monitors (XLR→TS cables)
+- [ ] Scarlett Outputs 1-2 → Adam F5 Monitors (XLR→TS cables)
 - [ ] Scarlett Headphone → Audio Technica Headphones (TRS cable)
-- [ ] ELF Speaker Out → Monitor Cab (TS cable)
 
 ### Software Setup
 - [ ] Install Focusrite Scarlett drivers
@@ -23,12 +24,14 @@
 **Use Case**: Simple practice without digital components
 
 **Setup**:
-1. Connect bass → FX Chain → Trace Elliot ELF → Monitor Cab
-2. Power on ELF
-3. Adjust volume and EQ on ELF
-4. Play directly through monitor cab
+1. Connect bass → (optional HX Stomp) → JDI input
+2. Patch JDI thru → Trace Elliot ELF → 10" Monitor Cab
+3. Power on ELF
+4. Adjust volume and EQ on ELF
+5. Play through the monitor cab; JDI DI out can stay unplugged
 
-**Benefits**: Zero latency, immediate response
+**Benefits**: Zero latency, immediate response. The JDI stays in line so the
+signal chain matches the digital workflows below — only the monitor path changes.
 
 ---
 
@@ -122,9 +125,9 @@
 ### Common Issues
 
 **No Sound from Instrument**:
-1. Check cable connections
-2. Verify ELF power and volume
-3. Check Scarlett input gain
+1. Check cable connections (bass → JDI input, JDI DI out → Scarlett)
+2. Verify HX Stomp is powered/not muted if inserted upstream
+3. Check Scarlett input gain (Input 1)
 4. Verify Loopback routing
 
 **High Latency**:
@@ -181,11 +184,11 @@
 ## Quick Reference
 
 ### Volume Levels (Typical)
-- **ELF Input**: 12 o'clock
-- **ELF Master**: 10-11 o'clock
-- **Scarlett Input 1**: -12dB to -6dB
+- **JDI**: passive, no gain stage (input level == thru level)
+- **Scarlett Input 1**: -12dB to -6dB (the JDI is passive, so add ~6-10 dB of gain vs. an active source)
 - **Scarlett Output**: -10dB to -5dB
 - **Studio Monitors**: 9-10 o'clock
+- **ELF Input/Master** (only when ELF is patched in as analog monitor): 12 / 10-11 o'clock
 
 ### Buffer Settings
 - **Practice**: 32-64 samples

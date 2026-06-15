@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 640" width="1060" height="640">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" width="1100" height="700">
   <defs>
     <marker id="arr" markerWidth="9" markerHeight="9" refX="7.5" refY="4" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0 0 L9 4 L0 8 z" fill="#374151"/>
@@ -12,64 +12,89 @@
       .p    {font:500 12px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#6b7280;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:5;stroke-linejoin:round;}
       .flow {stroke:#374151;stroke-width:2;fill:none;}
       .opt  {stroke-dasharray:5 5;}
+      .panel{fill:#f9fafb;stroke:#d1d5db;stroke-width:1.5;stroke-dasharray:6 5;}
+      .lh   {font:600 13px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#374151;}
+      .lb   {font:400 12px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#4b5563;}
     ]]></style>
   </defs>
 
   <text class="title" x="40" y="48">Performance Rig</text>
-  <text class="sub"   x="40" y="72">Gig-ready — ELF as preamp, monitor amp and FOH DI; GK combo chained for bigger / outdoor stages</text>
+  <text class="sub"   x="40" y="72">JDI is the FOH path; monitor amps are optional and configured per venue</text>
 
   <!-- Bass -->
-  <rect x="50" y="270" width="130" height="80" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
-  <text class="l" x="115" y="305">Bass</text>
-  <text class="s" x="115" y="327">active pickups</text>
+  <rect x="40" y="270" width="130" height="80" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text class="l" x="105" y="305">Bass</text>
+  <text class="s" x="105" y="327">active pickups</text>
 
-  <!-- FX / compressor -->
-  <rect x="270" y="265" width="200" height="90" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-  <text class="l" x="370" y="300">HX Stomp</text>
-  <text class="s" x="370" y="322">or MXR mini compressor</text>
+  <!-- FX / HX Stomp -->
+  <rect x="210" y="265" width="200" height="90" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text class="l" x="310" y="300">HX Stomp</text>
+  <text class="s" x="310" y="322">or MXR mini compressor</text>
 
-  <!-- Trace Elliot ELF -->
-  <rect x="560" y="260" width="230" height="100" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
-  <text class="l" x="675" y="295">Trace Elliot ELF</text>
-  <text class="s" x="675" y="317">preamp · 200W amp · DI</text>
+  <!-- Radial JDI -->
+  <rect x="450" y="265" width="190" height="90" rx="10" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1.5"/>
+  <text class="l" x="545" y="298">Radial JDI</text>
+  <text class="s" x="545" y="320">passive DI · Jensen Tx</text>
 
   <!-- FOH PA -->
-  <rect x="870" y="120" width="160" height="86" rx="10" fill="#ffe4e6" stroke="#e11d48" stroke-width="1.5"/>
-  <text class="l" x="950" y="155">FOH PA</text>
-  <text class="s" x="950" y="177">venue mains</text>
+  <rect x="880" y="120" width="180" height="86" rx="10" fill="#ffe4e6" stroke="#e11d48" stroke-width="1.5"/>
+  <text class="l" x="970" y="155">FOH PA</text>
+  <text class="s" x="970" y="177">venue mains</text>
 
-  <!-- TE 10" cab -->
-  <rect x="560" y="450" width="230" height="86" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
-  <text class="l" x="675" y="485">TE 10&quot; Cab</text>
-  <text class="s" x="675" y="507">stage monitor</text>
+  <!-- TE ELF (monitor amp, modes 1 & 3) -->
+  <rect x="210" y="460" width="200" height="90" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text class="l" x="310" y="495">Trace Elliot ELF</text>
+  <text class="s" x="310" y="517">preamp + 200W amp</text>
+  <text class="s" x="310" y="535">(modes 1 &amp; 3)</text>
 
-  <!-- GK Fusion 112 (optional extended monitor) -->
-  <rect x="870" y="440" width="160" height="106" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="6 5"/>
-  <text class="l" x="950" y="475">GK Fusion 112</text>
-  <text class="s" x="950" y="497">optional — outdoor</text>
-  <text class="s" x="950" y="515">extended monitor + DI</text>
+  <!-- TE 10" Cab -->
+  <rect x="440" y="460" width="180" height="90" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text class="l" x="530" y="495">TE 10&quot; Cab</text>
+  <text class="s" x="530" y="517">stage monitor</text>
+  <text class="s" x="530" y="535">(modes 1 &amp; 3)</text>
+
+  <!-- GK Fusion 112 (modes 2 & 3) -->
+  <rect x="660" y="460" width="200" height="110" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text class="l" x="760" y="495">GK Fusion 112</text>
+  <text class="s" x="760" y="517">preamp + 12&quot; combo</text>
+  <text class="s" x="760" y="535">(modes 2 &amp; 3)</text>
 
   <!-- Bass -> FX -->
-  <line class="flow" x1="180" y1="310" x2="270" y2="310" marker-end="url(#arr)"/>
-  <text class="p" x="225" y="300">TS</text>
+  <line class="flow" x1="170" y1="310" x2="210" y2="310" marker-end="url(#arr)"/>
+  <text class="p" x="190" y="300">TS</text>
 
-  <!-- FX -> ELF -->
-  <line class="flow" x1="470" y1="310" x2="560" y2="310" marker-end="url(#arr)"/>
-  <text class="p" x="515" y="300">TS</text>
+  <!-- FX -> JDI -->
+  <line class="flow" x1="410" y1="310" x2="450" y2="310" marker-end="url(#arr)"/>
+  <text class="p" x="430" y="300">TS</text>
 
-  <!-- ELF DI -> FOH -->
-  <path class="flow" d="M790 290 Q860 250 890 206" marker-end="url(#arr)"/>
-  <text class="p" x="845" y="246">XLR DI (pre/post)</text>
+  <!-- JDI DI out -> FOH -->
+  <path class="flow" d="M620 280 Q800 240 880 200" marker-end="url(#arr)"/>
+  <text class="p" x="760" y="232">XLR DI</text>
 
-  <!-- ELF speaker out -> TE cab -->
-  <line class="flow" x1="675" y1="360" x2="675" y2="450" marker-end="url(#arr)"/>
-  <text class="p" x="675" y="408">speaker out</text>
+  <!-- JDI thru -> TE ELF (modes 1 & 3) -->
+  <path class="flow opt" d="M510 355 Q400 410 310 460" marker-end="url(#arr)"/>
+  <text class="p" x="390" y="408">1/4&quot; thru (modes 1 &amp; 3)</text>
 
-  <!-- ELF DI -> GK (optional chain) -->
-  <path class="flow opt" d="M790 330 Q860 390 880 440" marker-end="url(#arr)"/>
-  <text class="p" x="855" y="392">DI link</text>
+  <!-- JDI thru -> GK Fusion (mode 2 only) -->
+  <path class="flow opt" d="M580 355 Q700 410 760 460" marker-end="url(#arr)"/>
+  <text class="p" x="700" y="408">1/4&quot; thru (mode 2)</text>
 
-  <!-- GK -> FOH (optional, pre-mode transparent) -->
-  <path class="flow opt" d="M1000 440 Q1015 320 1000 206" marker-end="url(#arr)"/>
-  <text class="p" x="1010" y="330">DI (pre)</text>
+  <!-- TE ELF -> TE 10" Cab (speaker out) -->
+  <line class="flow opt" x1="410" y1="505" x2="440" y2="505" marker-end="url(#arr)"/>
+  <text class="p" x="425" y="495">spkr</text>
+
+  <!-- TE ELF -> GK Fusion (mode 3 daisy chain) -->
+  <path class="flow opt" d="M410 540 Q540 595 660 555" marker-end="url(#arr)"/>
+  <text class="p" x="530" y="588">DI → Return (3a) / preamp in (3b)</text>
+
+  <!-- Monitor modes legend -->
+  <rect class="panel" x="700" y="245" width="380" height="180" rx="14"/>
+  <text class="lh" x="720" y="270">Monitor modes</text>
+  <text class="lb" x="720" y="294"><tspan font-weight="600">1.</tspan> TE ELF + 10″ Cab — small indoor rooms</text>
+  <text class="lb" x="720" y="314"><tspan font-weight="600">2.</tspan> GK Fusion 112 only — headroom &amp; low end</text>
+  <text class="lb" x="720" y="334"><tspan font-weight="600">3.</tspan> TE → GK daisy — clarity + presence</text>
+  <text class="lb" x="740" y="354"><tspan font-weight="600">3a.</tspan> GK Return (preamp bypass)</text>
+  <text class="lb" x="760" y="372">— when HX Stomp supplies FOH tone</text>
+  <text class="lb" x="740" y="392"><tspan font-weight="600">3b.</tspan> GK preamp input</text>
+  <text class="lb" x="760" y="410">— when there's no FOH</text>
 </svg>
