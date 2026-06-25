@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1490 880" width="1490" height="880">
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="7.5" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L9 4 L0 8 z" fill="#374151"/>
+    </marker>
+    <marker id="arrR" markerWidth="9" markerHeight="9" refX="7.5" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L9 4 L0 8 z" fill="#e11d48"/>
+    </marker>
+    <style><![CDATA[
+      .title{font:600 26px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#111827;}
+      .sub  {font:400 14px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#6b7280;}
+      .l    {font:600 15px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#111827;text-anchor:middle;}
+      .s    {font:400 12px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#4b5563;text-anchor:middle;}
+      .p    {font:500 11px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#6b7280;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:5;stroke-linejoin:round;}
+      .pi   {font:600 11px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#e11d48;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:5;stroke-linejoin:round;}
+      .flow {stroke:#374151;stroke-width:2;fill:none;}
+      .integ{stroke:#e11d48;stroke-width:3;fill:none;}
+      .panel{fill:#f9fafb;stroke:#d1d5db;stroke-width:1.5;stroke-dasharray:6 5;}
+      .lh   {font:600 14px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#374151;}
+      .lb   {font:400 12.5px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#4b5563;}
+      .foh  {fill:none;stroke:#94a3b8;stroke-width:2;stroke-dasharray:1.5 6;stroke-linecap:round;}
+      .fohl {font:600 15px ui-sans-serif,system-ui,'Segoe UI',Arial;fill:#64748b;letter-spacing:2px;}
+    ]]></style>
+  </defs>
+
+  <text class="title" x="40" y="50">Gig — Signal Chains</text>
+  <text class="sub"   x="40" y="76">How the band's sources reach FOH.</text>
+
+  <!-- ===================== FOH ENCLOSURE ===================== -->
+  <rect class="foh" x="760" y="94" width="714" height="502" rx="16"/>
+  <text class="fohl" x="1456" y="118" text-anchor="end">FOH</text>
+
+  <!-- ===================== SOURCES (col 1) ===================== -->
+  <!-- Vocal Mic 1 -->
+  <rect x="30" y="110" width="200" height="64" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text class="l" x="130" y="138">Vocal Mic 1</text>
+  <text class="s" x="130" y="158">vocalist · lead vocal</text>
+
+  <!-- Vocal Mic 2 -->
+  <rect x="30" y="196" width="200" height="64" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text class="l" x="130" y="224">Vocal Mic 2</text>
+  <text class="s" x="130" y="244">vocalist · backup / lead</text>
+
+  <!-- Guitar Rig -->
+  <rect x="30" y="300" width="200" height="72" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text class="l" x="130" y="330">Guitar Rig</text>
+  <text class="s" x="130" y="350">guitarist · own FX + combo,</text>
+  <text class="s" x="130" y="366">mic'd</text>
+
+  <!-- Drums -->
+  <rect x="30" y="392" width="200" height="72" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text class="l" x="130" y="424">Drums (×3 mics)</text>
+  <text class="s" x="130" y="444">drummer</text>
+
+  <!-- Active Basses -->
+  <rect x="30" y="505" width="200" height="80" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.5"/>
+  <text class="l" x="130" y="535">Active Basses</text>
+  <text class="s" x="130" y="555">Ibanez / Sterling · bassist</text>
+  <text class="s" x="130" y="571">9 V battery</text>
+
+  <!-- ===================== PER-SOURCE FX / DI ===================== -->
+  <!-- TC Helicon Mic Mechanic (col 2) -->
+  <rect x="290" y="196" width="190" height="64" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text class="l" x="385" y="224">TC Helicon</text>
+  <text class="s" x="385" y="244">Mic Mechanic · vocal FX</text>
+
+  <!-- HX Stomp (col 2) -->
+  <rect x="290" y="505" width="190" height="80" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
+  <text class="l" x="385" y="535">Line 6 HX Stomp</text>
+  <text class="s" x="385" y="555">bassist · FX + preamp</text>
+  <text class="s" x="385" y="571">MXR compressor = backup</text>
+
+  <!-- Radial JDI (col 3) -->
+  <rect x="540" y="509" width="180" height="72" rx="10" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text class="l" x="630" y="539">Radial JDI</text>
+  <text class="s" x="630" y="559">bassist · passive DI</text>
+  <text class="s" x="630" y="575">DI out + thru</text>
+
+  <!-- ===================== BACKING TRACKS ===================== -->
+  <rect x="290" y="40" width="190" height="58" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text class="l" x="385" y="66">iPad / iPhone</text>
+  <text class="s" x="385" y="86">backing tracks (Bluetooth)</text>
+
+  <rect x="540" y="40" width="180" height="58" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text class="l" x="630" y="66">BT → TRS</text>
+  <text class="s" x="630" y="86">stereo adapter</text>
+
+  <!-- ===================== MIXER ===================== -->
+  <rect x="780" y="120" width="180" height="470" rx="12" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+  <text class="l" x="870" y="345">Yamaha Mixer</text>
+  <text class="s" x="870" y="366">12-channel</text>
+  <text class="s" x="870" y="382">vocalist · FOH</text>
+
+  <!-- ===================== POWER AMPS ===================== -->
+  <rect x="1040" y="160" width="180" height="80" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text class="l" x="1130" y="195">Carvin</text>
+  <text class="s" x="1130" y="215">power amp · mains</text>
+
+  <rect x="1040" y="300" width="180" height="80" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text class="l" x="1130" y="335">QCS</text>
+  <text class="s" x="1130" y="355">power amp · monitors</text>
+
+  <rect x="1040" y="440" width="180" height="80" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text class="l" x="1130" y="475">Behringer</text>
+  <text class="s" x="1130" y="495">sub power amp</text>
+
+  <!-- ===================== SPEAKERS ===================== -->
+  <rect x="1300" y="160" width="160" height="80" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text class="l" x="1380" y="195">Mains (×2)</text>
+  <text class="s" x="1380" y="215">FOH speakers</text>
+
+  <rect x="1300" y="300" width="160" height="80" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text class="l" x="1380" y="335">Monitors (×2)</text>
+  <text class="s" x="1380" y="355">stage wedges</text>
+
+  <rect x="1300" y="440" width="160" height="80" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text class="l" x="1380" y="475">Sub</text>
+  <text class="s" x="1380" y="495">low end</text>
+
+  <!-- ===================== BASS MONITOR RIG (stage) ===================== -->
+  <rect x="300" y="700" width="180" height="80" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text class="l" x="390" y="735">10&quot; Cab</text>
+  <text class="s" x="390" y="755">ELF speaker out</text>
+
+  <rect x="540" y="700" width="180" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text class="l" x="630" y="735">Trace Elliot ELF</text>
+  <text class="s" x="630" y="755">bassist · bass monitor</text>
+
+  <rect x="780" y="700" width="180" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text class="l" x="870" y="730">GK Fusion 112</text>
+  <text class="s" x="870" y="750">bassist · monitor combo</text>
+  <text class="s" x="870" y="766">(footswitch drive)</text>
+
+  <!-- ===================== FLOWS ===================== -->
+  <!-- backing -->
+  <line class="flow" x1="480" y1="69" x2="540" y2="69" marker-end="url(#arr)"/>
+  <text class="p" x="510" y="59">BT</text>
+  <path class="flow" d="M720 69 Q770 90 780 150" marker-end="url(#arr)"/>
+  <text class="p" x="760" y="112">TRS stereo</text>
+
+  <!-- Mic 1 -> mixer -->
+  <path class="flow" d="M230 142 Q520 150 780 185" marker-end="url(#arr)"/>
+  <text class="p" x="500" y="138">XLR</text>
+
+  <!-- Mic 2 -> Mic Mechanic -> mixer -->
+  <line class="flow" x1="230" y1="228" x2="290" y2="228" marker-end="url(#arr)"/>
+  <text class="p" x="260" y="218">XLR</text>
+  <path class="flow" d="M480 228 Q620 226 780 225" marker-end="url(#arr)"/>
+  <text class="p" x="600" y="216">XLR (vocal FX = FOH DI)</text>
+
+  <!-- Guitar -> mixer -->
+  <path class="flow" d="M230 336 Q520 300 780 280" marker-end="url(#arr)"/>
+  <text class="p" x="520" y="300">XLR (amp mic)</text>
+
+  <!-- Drums -> mixer -->
+  <path class="flow" d="M230 428 Q520 380 780 340" marker-end="url(#arr)"/>
+  <text class="p" x="520" y="372">3 × XLR</text>
+
+  <!-- Bass -> HX -> JDI -->
+  <line class="flow" x1="230" y1="545" x2="290" y2="545" marker-end="url(#arr)"/>
+  <text class="p" x="260" y="535">TRS</text>
+  <line class="flow" x1="480" y1="545" x2="540" y2="545" marker-end="url(#arr)"/>
+  <text class="p" x="510" y="535">TRS</text>
+
+  <!-- JDI DI out -> mixer  (INTEGRATION POINT) -->
+  <path class="integ" d="M720 525 Q760 470 780 410" marker-end="url(#arrR)"/>
+  <text class="pi" x="700" y="455">XLR — my rig → FOH</text>
+
+  <!-- JDI thru -> TE ELF (stage monitor) -->
+  <line class="flow" x1="630" y1="581" x2="630" y2="700" marker-end="url(#arr)"/>
+  <text class="p" x="630" y="645">TRS thru</text>
+
+  <!-- TE ELF -> 10" cab -->
+  <line class="flow" x1="540" y1="740" x2="480" y2="740" marker-end="url(#arr)"/>
+  <text class="p" x="510" y="730">SpeakOn</text>
+
+  <!-- TE ELF -> GK -->
+  <line class="flow" x1="720" y1="740" x2="780" y2="740" marker-end="url(#arr)"/>
+  <text class="p" x="750" y="730">DI → GK send</text>
+
+  <!-- mixer -> amps -->
+  <path class="flow" d="M960 210 Q1000 205 1040 200" marker-end="url(#arr)"/>
+  <text class="p" x="1000" y="195">XLR ×2</text>
+  <line class="flow" x1="960" y1="340" x2="1040" y2="340" marker-end="url(#arr)"/>
+  <text class="p" x="1000" y="330">XLR ×2</text>
+  <path class="flow" d="M960 470 Q1000 475 1040 480" marker-end="url(#arr)"/>
+  <text class="p" x="1000" y="465">XLR</text>
+
+  <!-- amps -> speakers -->
+  <line class="flow" x1="1220" y1="200" x2="1300" y2="200" marker-end="url(#arr)"/>
+  <text class="p" x="1260" y="190">SpeakOn ×2</text>
+  <line class="flow" x1="1220" y1="340" x2="1300" y2="340" marker-end="url(#arr)"/>
+  <text class="p" x="1260" y="330">TRS ×2</text>
+  <line class="flow" x1="1220" y1="480" x2="1300" y2="480" marker-end="url(#arr)"/>
+  <text class="p" x="1260" y="470">TRS</text>
+
+  <!-- ===================== LEGEND ===================== -->
+  <rect class="panel" x="1010" y="600" width="450" height="250" rx="14"/>
+  <text class="lh" x="1032" y="628">Legend</text>
+
+  <rect x="1032" y="644" width="22" height="16" rx="4" fill="#e0f2fe" stroke="#0284c7"/>
+  <text class="lb" x="1064" y="657">Instruments / sources</text>
+  <rect x="1032" y="670" width="22" height="16" rx="4" fill="#fef3c7" stroke="#d97706"/>
+  <text class="lb" x="1064" y="683">FX / preamp</text>
+  <rect x="1032" y="696" width="22" height="16" rx="4" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text class="lb" x="1064" y="709">DI (FOH integration)</text>
+  <rect x="1032" y="722" width="22" height="16" rx="4" fill="#ffe4e6" stroke="#e11d48"/>
+  <text class="lb" x="1064" y="735">Mixer / FOH</text>
+  <rect x="1032" y="748" width="22" height="16" rx="4" fill="#ede9fe" stroke="#7c3aed"/>
+  <text class="lb" x="1064" y="761">Power amps</text>
+
+  <rect x="1248" y="644" width="22" height="16" rx="4" fill="#fce7f3" stroke="#db2777"/>
+  <text class="lb" x="1280" y="657">Speakers / cabs</text>
+  <rect x="1248" y="670" width="22" height="16" rx="4" fill="#dcfce7" stroke="#16a34a"/>
+  <text class="lb" x="1280" y="683">Bass monitor amps</text>
+  <rect x="1248" y="696" width="22" height="16" rx="4" fill="#f1f5f9" stroke="#64748b"/>
+  <text class="lb" x="1280" y="709">Backing tracks</text>
+  <line x1="1248" y1="730" x2="1270" y2="730" class="integ"/>
+  <text class="lb" x="1280" y="735">My rig → FOH</text>
+
+  <text class="lb" x="1032" y="800"><tspan font-weight="600">Owners:</tspan> bassist (this rig), vocalist (FOH +</text>
+  <text class="lb" x="1032" y="820">vocals), guitarist, drummer. Heavier borders =</text>
+  <text class="lb" x="1032" y="840">the bass rig owned &amp; carried by the bassist.</text>
+</svg>

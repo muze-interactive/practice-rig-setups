@@ -220,6 +220,11 @@ constraints.
 - More boxes on stage than a one-amp setup, plus an extra cable run for the JDI.
 - No live capture path today.
 
+> **Deep dive:** [Band gig configuration](./rigs/gig/band-gig-configuration.md) —
+> a full-band FOH PA (owned by bandmates) that this rig plugs into via the JDI, with
+> [signal-chain](./rigs/gig/gig-signal-chains.svg) and
+> [power-topology](./rigs/gig/gig-power-topology.svg) diagrams.
+
 ## Future Directions
 
 A few directions under research could change the setups above:
