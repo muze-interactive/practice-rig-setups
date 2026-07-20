@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 900" width="1500" height="900" font-family="Inter, Helvetica, Arial, sans-serif" stroke="#000" stroke-width="2" fill="none">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000" stroke="none"/>
+    </marker>
+    <style><![CDATA[
+      .title{fill:#5b1b3a;stroke:none;font-size:26px;font-weight:bold;text-anchor:middle;dominant-baseline:middle;}
+      .label{fill:#000;stroke:none;font-size:20px;text-anchor:middle;dominant-baseline:middle;}
+      .big{fill:#5b1b3a;stroke:none;font-size:26px;font-weight:bold;text-anchor:middle;dominant-baseline:middle;}
+      .sublabel{fill:#333;stroke:none;font-size:15px;text-anchor:middle;dominant-baseline:middle;}
+      .portlabel{fill:#000;stroke:none;font-size:14px;text-anchor:start;dominant-baseline:middle;}
+      .conlabel{fill:#0b5;stroke:none;font-size:13px;text-anchor:middle;dominant-baseline:middle;}
+      .midilabel{fill:#a0559b;stroke:none;font-size:13px;text-anchor:middle;dominant-baseline:middle;}
+      .commslabel{fill:#c0651a;stroke:none;font-size:13px;text-anchor:middle;dominant-baseline:middle;}
+      .note{fill:#555;stroke:none;font-size:14px;text-anchor:start;dominant-baseline:middle;}
+      .box{fill:#fff;stroke:#000;stroke-width:2;}
+      .mixerbox{fill:#fbeef4;stroke:#5b1b3a;stroke-width:3;}
+      .midibox{fill:#f6eef6;stroke:#a0559b;stroke-width:2;}
+      .commsbox{fill:#fbf1e6;stroke:#c0651a;stroke-width:2;}
+      .dotted{stroke-dasharray:6 6;}
+    ]]></style>
+  </defs>
+
+  <text x="750" y="36" class="title">Home / Band Studio Signal Chain — Allen &amp; Heath CQ-18T</text>
+
+  <!-- ============ (control surfaces consolidated into one iPad box, bottom-right) ============ -->
+
+  <!-- ============ MIXER (hub) ============ -->
+  <g transform="translate(650,500)">
+    <rect class="mixerbox" x="-160" y="-350" width="320" height="690" rx="14"/>
+    <text class="big" x="0" y="-318">Allen &amp; Heath CQ-18T</text>
+    <text class="sublabel" x="0" y="-290">16 mic pres • 24×22 USB to DAW</text>
+    <text class="sublabel" x="0" y="-268">built-in touchscreen • native Bluetooth</text>
+    <text class="sublabel" x="0" y="-246">6 mix outs • 2 main XLR • 2 phones</text>
+  </g>
+
+  <!-- ============ INPUTS: instruments & mics ============ -->
+  <g transform="translate(210,215)">
+    <rect class="box" x="-150" y="-120" width="300" height="245" rx="12"/>
+    <text class="label" x="0" y="-96">Instruments &amp; Mics</text>
+    <text class="portlabel" x="-135" y="-62">Bass — DI            → Ch 1</text>
+    <text class="portlabel" x="-135" y="-34">Guitar — DI          → Ch 2</text>
+    <text class="portlabel" x="-135" y="-6">Keys — line (stereo) → Ch 3–4</text>
+    <text class="portlabel" x="-135" y="22">Vocal 1 — mic        → Ch 5</text>
+    <text class="portlabel" x="-135" y="50">Vocal 2 — mic        → Ch 6</text>
+    <text class="portlabel" x="-135" y="78">Drums ×6 — mic       → Ch 7–12</text>
+  </g>
+  <line x1="360" y1="215" x2="490" y2="215" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="425" y="202">Ch 1–12</text>
+
+  <!-- ============ INPUTS: talkback / comms ============ -->
+  <g transform="translate(210,430)">
+    <rect class="commsbox" x="-150" y="-58" width="300" height="116" rx="12"/>
+    <text class="label" x="0" y="-34">Talkback / Comms</text>
+    <text class="portlabel" x="-135" y="-8">Bandleader cue mic → Ch 13</text>
+    <text class="portlabel" x="-135" y="16">Player cue mics    → Ch 14–16</text>
+    <text class="sublabel" x="0" y="40">to iem monitor mix • off Mains</text>
+  </g>
+  <line x1="360" y1="430" x2="490" y2="440" marker-end="url(#arrow)"/>
+  <text class="commslabel" x="425" y="418">Ch 13–16</text>
+
+  <!-- ============ INPUTS: backing track ============ -->
+  <rect class="box dotted" x="60" y="540" width="300" height="190" rx="12"/>
+  <text class="label" x="210" y="565">Backing Track (stereo)</text>
+  <g transform="translate(210,620)">
+    <rect class="box" x="-130" y="-26" width="260" height="52" rx="8"/>
+    <text class="label" x="0" y="-6">Native Bluetooth</text>
+    <text class="sublabel" x="0" y="13">built-in (no dongle)</text>
+  </g>
+  <g transform="translate(210,690)">
+    <rect class="box" x="-130" y="-26" width="260" height="52" rx="8"/>
+    <text class="label" x="0" y="-6">Stereo TRS line</text>
+    <text class="sublabel" x="0" y="13">dedicated stereo in → Ch 17–18</text>
+  </g>
+  <line x1="340" y1="620" x2="490" y2="605" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="415" y="598">BT return</text>
+  <line x1="340" y1="690" x2="490" y2="655" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="415" y="702">Ch 17–18</text>
+
+  <!-- ============ OUTPUT: PA ============ -->
+  <g transform="translate(1080,215)">
+    <rect class="box" x="-150" y="-48" width="300" height="96" rx="12"/>
+    <text class="label" x="0" y="-12">PA Active Cabs</text>
+    <text class="sublabel" x="0" y="14">2× Mackie Thump212</text>
+  </g>
+  <line x1="810" y1="215" x2="930" y2="215" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="870" y="202">Main Out L/R</text>
+
+  <!-- ============ OUTPUT: wedges ============ -->
+  <g transform="translate(1080,345)">
+    <rect class="box" x="-150" y="-48" width="300" height="96" rx="12"/>
+    <text class="label" x="0" y="-12">Floor Wedges</text>
+    <text class="sublabel" x="0" y="14">Mackie Thump212 (tilted)</text>
+  </g>
+  <line x1="810" y1="335" x2="930" y2="345" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="868" y="322">Mix 1–2</text>
+
+  <!-- ============ OUTPUT: IEM ============ -->
+  <g transform="translate(1030,480)">
+    <rect class="box" x="-130" y="-42" width="260" height="84" rx="12"/>
+    <text class="label" x="0" y="-10">IEM Sends</text>
+    <text class="sublabel" x="0" y="14">Mix 3–6 (stereo-link)</text>
+  </g>
+  <line x1="810" y1="455" x2="900" y2="480" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="850" y="462">Mix sends</text>
+
+  <g transform="translate(1350,455)">
+    <rect class="box" x="-140" y="-38" width="280" height="76" rx="10"/>
+    <text class="label" x="0" y="-8">PSM300 Wireless</text>
+    <text class="sublabel" x="0" y="14">vocals, guitar</text>
+  </g>
+  <line x1="1160" y1="478" x2="1210" y2="457" marker-end="url(#arrow)"/>
+
+  <g transform="translate(1350,560)">
+    <rect class="box" x="-140" y="-38" width="280" height="76" rx="10"/>
+    <text class="label" x="0" y="-8">Wired Belt-packs</text>
+    <text class="sublabel" x="0" y="14">drums, keys, bass</text>
+  </g>
+  <line x1="1160" y1="513" x2="1210" y2="558" marker-end="url(#arrow)"/>
+
+  <text class="note" x="1215" y="617">→ Shure SE215 earphones</text>
+  <text class="commslabel" x="1380" y="640">talkback folded into every mix</text>
+
+  <!-- ============ Mac / DAW callout ============ -->
+  <g transform="translate(1080,700)">
+    <rect class="box dotted" x="-180" y="-72" width="360" height="144" rx="12"/>
+    <text class="label" x="0" y="-46">Mac — Logic Pro</text>
+    <g transform="translate(-90,12)">
+      <rect class="box" x="-80" y="-28" width="160" height="56" rx="8"/>
+      <text class="sublabel" x="0" y="-6">Multitrack</text>
+      <text class="sublabel" x="0" y="13">record (up to 24)</text>
+    </g>
+    <g transform="translate(90,12)">
+      <rect class="box" x="-80" y="-28" width="160" height="56" rx="8"/>
+      <text class="sublabel" x="0" y="-6">Backing track</text>
+      <text class="sublabel" x="0" y="13">playback</text>
+    </g>
+  </g>
+  <line x1="810" y1="680" x2="900" y2="680" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="855" y="667">USB multitrack</text>
+  <line x1="900" y1="725" x2="810" y2="725" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="855" y="740">USB return</text>
+
+  <!-- ============ iPad — one control surface, all apps (bottom) ============ -->
+  <g transform="translate(1080,838)">
+    <rect class="box" x="-190" y="-52" width="380" height="104" rx="10"/>
+    <text class="label" x="0" y="-30">iPad — Control Surface</text>
+    <text class="sublabel" x="0" y="-6">CQ MixPad — mixer (Wi-Fi / Ethernet)</text>
+    <text class="sublabel" x="0" y="14">Logic Remote — Logic Pro (Wi-Fi)</text>
+    <text class="sublabel" x="0" y="34">Muzikbox — voice → mixer, MIDI (NRPN/CC/PC)</text>
+  </g>
+  <!-- Logic Remote controls the Mac -->
+  <line x1="1080" y1="786" x2="1080" y2="774" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="1118" y="781">DAW</text>
+  <!-- CQ MixPad + Muzikbox control the mixer -->
+  <line x1="888" y1="838" x2="812" y2="838" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="850" y="828">mixer + MIDI</text>
+
+  <!-- ============ footnotes ============ -->
+  <text class="note" x="60" y="762">Native BT — no dongle for backing track.</text>
+  <text class="note" x="60" y="784">Talkback → all monitors, off Mains.</text>
+  <text class="note" x="60" y="806">Line backing track → stereo in 17–18.</text>
+</svg>

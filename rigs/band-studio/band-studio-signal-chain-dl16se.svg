@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 900" width="1500" height="900" font-family="Inter, Helvetica, Arial, sans-serif" stroke="#000" stroke-width="2" fill="none">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000" stroke="none"/>
+    </marker>
+    <style><![CDATA[
+      .title{fill:#1b3a5b;stroke:none;font-size:26px;font-weight:bold;text-anchor:middle;dominant-baseline:middle;}
+      .label{fill:#000;stroke:none;font-size:20px;text-anchor:middle;dominant-baseline:middle;}
+      .big{fill:#1b3a5b;stroke:none;font-size:26px;font-weight:bold;text-anchor:middle;dominant-baseline:middle;}
+      .sublabel{fill:#333;stroke:none;font-size:15px;text-anchor:middle;dominant-baseline:middle;}
+      .portlabel{fill:#000;stroke:none;font-size:14px;text-anchor:start;dominant-baseline:middle;}
+      .conlabel{fill:#0b5;stroke:none;font-size:13px;text-anchor:middle;dominant-baseline:middle;}
+      .note{fill:#555;stroke:none;font-size:14px;text-anchor:start;dominant-baseline:middle;}
+      .box{fill:#fff;stroke:#000;stroke-width:2;}
+      .mixerbox{fill:#eef4fb;stroke:#1b3a5b;stroke-width:3;}
+      .dotted{stroke-dasharray:6 6;}
+    ]]></style>
+  </defs>
+
+  <text x="750" y="36" class="title">Band Studio Signal Chain — Mackie DL16SE</text>
+
+  <!-- ============ CONTROL ============ -->
+  <g transform="translate(650,100)">
+    <rect class="box" x="-160" y="-32" width="320" height="56" rx="10"/>
+    <text class="label" x="0" y="-8">Control: iPad / Phone</text>
+    <text class="sublabel" x="0" y="12">Master Fader SE</text>
+  </g>
+  <line x1="650" y1="124" x2="650" y2="150" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="740" y="136">Wi-Fi / Ethernet</text>
+
+  <!-- ============ MIXER (hub) ============ -->
+  <g transform="translate(650,500)">
+    <rect class="mixerbox" x="-160" y="-350" width="320" height="690" rx="14"/>
+    <text class="big" x="0" y="-318">Mackie DL16SE</text>
+    <text class="sublabel" x="0" y="-290">16 mic pres • 16×16 USB multitrack</text>
+    <text class="sublabel" x="0" y="-268">6 aux (stereo-link) • 13 buses</text>
+  </g>
+
+  <!-- ============ INPUTS: instruments & mics ============ -->
+  <g transform="translate(210,235)">
+    <rect class="box" x="-150" y="-105" width="300" height="210" rx="12"/>
+    <text class="label" x="0" y="-80">Instruments &amp; Mics</text>
+    <text class="portlabel" x="-135" y="-46">Bass — DI            → Ch 1</text>
+    <text class="portlabel" x="-135" y="-20">Guitar — DI          → Ch 2</text>
+    <text class="portlabel" x="-135" y="6">Keys — line (stereo) → Ch 3–4</text>
+    <text class="portlabel" x="-135" y="32">Vocal 1 — mic        → Ch 5</text>
+    <text class="portlabel" x="-135" y="58">Vocal 2 — mic        → Ch 6</text>
+    <text class="portlabel" x="-135" y="84">Drums ×3 — mic       → Ch 7–9</text>
+  </g>
+  <line x1="360" y1="235" x2="490" y2="235" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="425" y="222">Ch 1–9</text>
+
+  <!-- ============ INPUTS: backing track ============ -->
+  <rect class="box dotted" x="60" y="430" width="300" height="185" rx="12"/>
+  <text class="label" x="210" y="455">Backing Track (stereo)</text>
+  <g transform="translate(210,510)">
+    <rect class="box" x="-130" y="-26" width="260" height="52" rx="8"/>
+    <text class="label" x="0" y="-6">Bluetooth</text>
+    <text class="sublabel" x="0" y="13">BT receiver → line in</text>
+  </g>
+  <g transform="translate(210,580)">
+    <rect class="box" x="-130" y="-26" width="260" height="52" rx="8"/>
+    <text class="label" x="0" y="-6">Stereo XLR / TRS</text>
+    <text class="sublabel" x="0" y="13">dual mono line</text>
+  </g>
+  <line x1="340" y1="510" x2="490" y2="525" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="415" y="503">Ch 15–16</text>
+  <line x1="340" y1="580" x2="490" y2="565" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="415" y="592">Ch 13–14</text>
+
+  <!-- ============ OUTPUT: PA ============ -->
+  <g transform="translate(1080,215)">
+    <rect class="box" x="-150" y="-48" width="300" height="96" rx="12"/>
+    <text class="label" x="0" y="-12">PA Active Cabs</text>
+    <text class="sublabel" x="0" y="14">2× Mackie Thump212</text>
+  </g>
+  <line x1="810" y1="215" x2="930" y2="215" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="870" y="202">Main Out L/R</text>
+
+  <!-- ============ OUTPUT: wedges ============ -->
+  <g transform="translate(1080,360)">
+    <rect class="box" x="-150" y="-48" width="300" height="96" rx="12"/>
+    <text class="label" x="0" y="-12">Floor Wedges</text>
+    <text class="sublabel" x="0" y="14">Mackie Thump212 (tilted)</text>
+  </g>
+  <line x1="810" y1="345" x2="930" y2="360" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="868" y="332">Aux 1–2</text>
+
+  <!-- ============ OUTPUT: IEM ============ -->
+  <g transform="translate(1030,510)">
+    <rect class="box" x="-130" y="-42" width="260" height="84" rx="12"/>
+    <text class="label" x="0" y="-10">IEM Sends</text>
+    <text class="sublabel" x="0" y="14">Aux 3–6 (stereo-link)</text>
+  </g>
+  <line x1="810" y1="475" x2="900" y2="510" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="850" y="482">Aux 3–6</text>
+
+  <g transform="translate(1350,470)">
+    <rect class="box" x="-140" y="-38" width="280" height="76" rx="10"/>
+    <text class="label" x="0" y="-8">PSM300 Wireless</text>
+    <text class="sublabel" x="0" y="14">vocals, guitar</text>
+  </g>
+  <line x1="1160" y1="495" x2="1210" y2="472" marker-end="url(#arrow)"/>
+
+  <g transform="translate(1350,575)">
+    <rect class="box" x="-140" y="-38" width="280" height="76" rx="10"/>
+    <text class="label" x="0" y="-8">Wired Belt-packs</text>
+    <text class="sublabel" x="0" y="14">drums, keys, bass</text>
+  </g>
+  <line x1="1160" y1="528" x2="1210" y2="573" marker-end="url(#arrow)"/>
+
+  <text class="note" x="1215" y="632">→ Shure SE215 earphones</text>
+
+  <!-- ============ Mac / DAW callout ============ -->
+  <g transform="translate(1080,735)">
+    <rect class="box dotted" x="-180" y="-72" width="360" height="144" rx="12"/>
+    <text class="label" x="0" y="-46">Mac — Logic / Ableton</text>
+    <g transform="translate(-90,12)">
+      <rect class="box" x="-80" y="-28" width="160" height="56" rx="8"/>
+      <text class="sublabel" x="0" y="-6">Multitrack</text>
+      <text class="sublabel" x="0" y="13">record 16 ch</text>
+    </g>
+    <g transform="translate(90,12)">
+      <rect class="box" x="-80" y="-28" width="160" height="56" rx="8"/>
+      <text class="sublabel" x="0" y="-6">Backing track</text>
+      <text class="sublabel" x="0" y="13">playback</text>
+    </g>
+  </g>
+  <line x1="810" y1="715" x2="900" y2="715" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="855" y="702">USB 16×16</text>
+  <line x1="900" y1="760" x2="810" y2="760" marker-end="url(#arrow)"/>
+  <text class="conlabel" x="855" y="775">USB return</text>
+
+  <!-- ============ footnote ============ -->
+  <text class="note" x="60" y="700">Backing track: Bluetooth + USB return + stereo XLR/TRS all supported.</text>
+  <text class="note" x="60" y="722">IEM mixes = aux sends; each musician controls their own mix in Master Fader SE.</text>
+  <text class="note" x="60" y="744">Hybrid IEM: wireless PSM300 for movers, wired belt-packs for stationary players.</text>
+</svg>
