@@ -19,7 +19,7 @@
   </defs>
 
   <text class="title" x="40" y="48">Performance Rig</text>
-  <text class="sub"   x="40" y="72">Anagram XLR out is the FOH path; monitor amps are optional and configured per venue</text>
+  <text class="sub"   x="40" y="72">Anagram XLR out → FOH mixer → PA; monitor amps only needed when the venue backline has no wedges</text>
 
   <!-- Bass -->
   <rect x="40" y="270" width="130" height="80" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
@@ -36,13 +36,19 @@
   <text class="lh" x="60" y="130">Backup chain (if the Anagram is out)</text>
   <text class="lb" x="60" y="154">Bass → HX Stomp, ToneX One or MXR mini comp → Radial JDI</text>
   <text class="lb" x="60" y="176">None has a balanced XLR out, so the JDI passive DI</text>
-  <text class="lb" x="60" y="196">supplies FOH (XLR DI) and its 1/4″ thru feeds the</text>
+  <text class="lb" x="60" y="196">feeds the FOH mixer (XLR DI); its 1/4″ thru feeds the</text>
   <text class="lb" x="60" y="214">monitor amps — same modes as below.</text>
 
+  <!-- FOH Mixer -->
+  <rect x="610" y="110" width="210" height="100" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text class="l" x="715" y="143">FOH Mixer</text>
+  <text class="s" x="715" y="165">venue / band-provided</text>
+  <text class="s" x="715" y="185">mains → PA · aux → wedges</text>
+
   <!-- FOH PA -->
-  <rect x="880" y="120" width="180" height="86" rx="10" fill="#ffe4e6" stroke="#e11d48" stroke-width="1.5"/>
-  <text class="l" x="970" y="155">FOH PA</text>
-  <text class="s" x="970" y="177">venue mains</text>
+  <rect x="880" y="117" width="180" height="86" rx="10" fill="#ffe4e6" stroke="#e11d48" stroke-width="1.5"/>
+  <text class="l" x="970" y="152">FOH PA</text>
+  <text class="s" x="970" y="174">venue mains</text>
 
   <!-- TE ELF (monitor amp, modes 1 & 3) -->
   <rect x="210" y="460" width="200" height="90" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="6 5"/>
@@ -66,9 +72,13 @@
   <line class="flow" x1="170" y1="310" x2="230" y2="310" marker-end="url(#arr)"/>
   <text class="p" x="200" y="300">TS</text>
 
-  <!-- Anagram XLR out -> FOH -->
-  <path class="flow" d="M490 280 Q760 240 880 190" marker-end="url(#arr)"/>
-  <text class="p" x="592" y="256">XLR out</text>
+  <!-- Anagram XLR out -> FOH Mixer -->
+  <path class="flow" d="M490 285 Q620 275 660 210" marker-end="url(#arr)"/>
+  <text class="p" x="590" y="262">XLR out</text>
+
+  <!-- FOH Mixer -> FOH PA -->
+  <line class="flow" x1="820" y1="160" x2="880" y2="160" marker-end="url(#arr)"/>
+  <text class="p" x="850" y="150">mains</text>
 
   <!-- Anagram 1/4" out -> TE ELF (modes 1 & 3) -->
   <path class="flow opt" d="M300 355 L310 460" marker-end="url(#arr)"/>
@@ -88,7 +98,7 @@
 
   <!-- Monitor modes legend -->
   <rect class="panel" x="700" y="245" width="380" height="180" rx="14"/>
-  <text class="lh" x="720" y="270">Monitor modes</text>
+  <text class="lh" x="720" y="270">Monitor modes <tspan font-weight="400" fill="#6b7280">— only if no venue wedges</tspan></text>
   <text class="lb" x="720" y="294"><tspan font-weight="600">1.</tspan> TE ELF + 10″ Cab — small indoor rooms</text>
   <text class="lb" x="720" y="314"><tspan font-weight="600">2.</tspan> GK Fusion 112 only — headroom &amp; low end</text>
   <text class="lb" x="720" y="334"><tspan font-weight="600">3.</tspan> TE → GK daisy — clarity + presence</text>

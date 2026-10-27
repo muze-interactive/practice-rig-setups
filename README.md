@@ -197,14 +197,19 @@ constraints.
   active pickups for tonal/EQ options. This keeps tone control at the bass, though
   it's rarely needed.
 - **FX + Preamp + DI** — a **Darkglass Anagram** (FX + preamp/IR). Its balanced
-  **XLR out** goes to FOH; its **1/4" out** drives whichever monitor amp(s) are on
-  stage. For gigs where carrying a combo isn't practical, only the Anagram → FOH
-  path is needed.
+  **XLR out** goes to the FOH mixer; its **1/4" out** drives whichever monitor
+  amp(s) are on stage. For gigs where carrying a combo isn't practical, only the
+  Anagram → FOH path is needed.
+- **FOH mixer** — provided by the venue (or a bandmate). It takes the Anagram's XLR
+  feed on a channel strip and sends it to the **FOH PA** mains, and usually to the
+  stage wedges over aux sends.
 - **Backup** — HX Stomp, ToneX One, or a simple compressor (MXR mini series) →
   **Radial JDI Jensen** passive DI, since none of them has a balanced XLR out. The
-  JDI's XLR DI out goes to FOH and its 1/4" thru feeds the monitor amps, in the
-  same configurations below.
-- **Monitor amp(s)** — three configurations, picked per venue:
+  JDI's XLR DI out goes to the FOH mixer and its 1/4" thru feeds the monitor amps,
+  in the same configurations below.
+- **Monitor amp(s)** — **optional only when the venue provides wedge monitors as
+  part of the backline**; if it doesn't, bring one of three configurations, picked
+  per venue:
   1. **TE ELF + 10" cab only** — small indoor rooms / coffee-shop gigs.
   2. **GK Fusion 112 only** — more headroom and stronger low end / stage presence,
      trading some midrange clarity.
@@ -223,8 +228,9 @@ constraints.
 
 - Same Bass → Anagram signal path as the Home Studio — consistent tone and
   presets, and one fewer thing to relearn between contexts.
-- Decouples FOH from the monitor amps; can show up with no combo at all and still
-  hand FOH a balanced DI feed straight from the Anagram.
+- Decouples FOH from the monitor amps; when the venue supplies wedges, can show
+  up with no combo at all and still hand the FOH mixer a balanced DI feed straight
+  from the Anagram.
 - A documented backup chain (HX Stomp / ToneX One → JDI) if the Anagram fails.
 - Three monitor configurations to suit the room — small indoor, larger outdoor,
   or daisy-chained for both clarity and headroom.

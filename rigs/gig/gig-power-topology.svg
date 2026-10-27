@@ -78,7 +78,7 @@
   <!-- Drums: cooling fan (powered) + mics note -->
   <rect x="640" y="410" width="180" height="56" rx="9" fill="#ffe4e6" stroke="#e11d48" stroke-width="1.5"/>
   <text class="l" x="730" y="438">Cooling Fan</text>
-  <text class="s" x="730" y="456">drummer · 120 VAC</text>
+  <text class="s" x="730" y="456">vocalist · 120 VAC</text>
 
   <rect x="640" y="480" width="180" height="50" rx="9" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4"/>
   <text class="s" x="730" y="503">Mics: phantom</text>
@@ -86,10 +86,10 @@
 
   <!-- Bass strip consumers -->
   <rect x="850" y="410" width="200" height="50" rx="9" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-  <text class="l" x="950" y="440">HX Stomp · 12 VDC</text>
+  <text class="l" x="950" y="440">Anagram · 9 VDC</text>
 
   <rect x="850" y="472" width="200" height="50" rx="9" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1.5"/>
-  <text class="l" x="950" y="502">MXR Comp · 9 VDC</text>
+  <text class="l" x="950" y="502">ToneX One · 9 VDC</text>
 
   <rect x="850" y="534" width="200" height="50" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
   <text class="l" x="950" y="564">iPad · USB-C</text>
@@ -154,9 +154,9 @@
   <rect x="58" y="660" width="20" height="14" rx="4" fill="#ffe4e6" stroke="#e11d48"/>
   <text class="lb" x="86" y="672">120 VAC</text>
   <rect x="200" y="660" width="20" height="14" rx="4" fill="#fef3c7" stroke="#d97706"/>
-  <text class="lb" x="228" y="672">12 VDC adapter</text>
+  <text class="lb" x="228" y="672">9 VDC adapter (Anagram)</text>
   <rect x="58" y="686" width="20" height="14" rx="4" fill="#e0e7ff" stroke="#4f46e5"/>
-  <text class="lb" x="86" y="698">9 VDC adapter</text>
+  <text class="lb" x="86" y="698">Backup FX (ToneX)</text>
   <rect x="200" y="686" width="20" height="14" rx="4" fill="#dcfce7" stroke="#16a34a"/>
   <text class="lb" x="228" y="698">9 V battery</text>
   <rect x="58" y="712" width="20" height="14" rx="4" fill="#e0f2fe" stroke="#0284c7"/>

@@ -65,17 +65,20 @@
   <text class="l" x="385" y="224">TC Helicon</text>
   <text class="s" x="385" y="244">Mic Mechanic · vocal FX</text>
 
-  <!-- HX Stomp (col 2) -->
-  <rect x="290" y="505" width="190" height="80" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
-  <text class="l" x="385" y="535">Line 6 HX Stomp</text>
-  <text class="s" x="385" y="555">bassist · FX + preamp</text>
-  <text class="s" x="385" y="571">MXR compressor = backup</text>
+  <!-- Darkglass Anagram (col 2) -->
+  <rect x="290" y="505" width="230" height="80" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
+  <text class="l" x="405" y="535">Darkglass Anagram</text>
+  <text class="s" x="405" y="555">bassist · FX + preamp/IR</text>
+  <text class="s" x="405" y="571">XLR out (DI) + 1/4" out</text>
 
-  <!-- Radial JDI (col 3) -->
-  <rect x="540" y="509" width="180" height="72" rx="10" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2.5"/>
-  <text class="l" x="630" y="539">Radial JDI</text>
-  <text class="s" x="630" y="559">bassist · passive DI</text>
-  <text class="s" x="630" y="575">DI out + thru</text>
+  <!-- Backup chain -->
+  <rect class="panel" x="30" y="630" width="250" height="150" rx="14"/>
+  <text class="lh" x="48" y="656">Bass backup chain</text>
+  <text class="lb" x="48" y="680">ToneX One → Radial JDI</text>
+  <text class="lb" x="48" y="698">passive DI.</text>
+  <text class="lb" x="48" y="722">ToneX has no XLR out, so the</text>
+  <text class="lb" x="48" y="740">JDI's XLR DI feeds the mixer and</text>
+  <text class="lb" x="48" y="758">its thru feeds the TE ELF.</text>
 
   <!-- ===================== BACKING TRACKS ===================== -->
   <rect x="290" y="40" width="190" height="58" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
@@ -157,19 +160,17 @@
   <path class="flow" d="M230 428 Q520 380 780 340" marker-end="url(#arr)"/>
   <text class="p" x="520" y="372">3 × XLR</text>
 
-  <!-- Bass -> HX -> JDI -->
+  <!-- Bass -> Anagram -->
   <line class="flow" x1="230" y1="545" x2="290" y2="545" marker-end="url(#arr)"/>
   <text class="p" x="260" y="535">TRS</text>
-  <line class="flow" x1="480" y1="545" x2="540" y2="545" marker-end="url(#arr)"/>
-  <text class="p" x="510" y="535">TRS</text>
 
-  <!-- JDI DI out -> mixer  (INTEGRATION POINT) -->
-  <path class="integ" d="M720 525 Q760 470 780 410" marker-end="url(#arrR)"/>
-  <text class="pi" x="700" y="455">XLR — my rig → FOH</text>
+  <!-- Anagram XLR out -> mixer  (INTEGRATION POINT) -->
+  <path class="integ" d="M520 530 Q720 500 780 410" marker-end="url(#arrR)"/>
+  <text class="pi" x="660" y="492">XLR — my rig → FOH</text>
 
-  <!-- JDI thru -> TE ELF (stage monitor) -->
-  <line class="flow" x1="630" y1="581" x2="630" y2="700" marker-end="url(#arr)"/>
-  <text class="p" x="630" y="645">TRS thru</text>
+  <!-- Anagram 1/4" out -> TE ELF (stage monitor) -->
+  <path class="flow" d="M470 585 Q590 620 625 700" marker-end="url(#arr)"/>
+  <text class="p" x="575" y="640">1/4" out</text>
 
   <!-- TE ELF -> 10" cab -->
   <line class="flow" x1="540" y1="740" x2="480" y2="740" marker-end="url(#arr)"/>
@@ -202,9 +203,9 @@
   <rect x="1032" y="644" width="22" height="16" rx="4" fill="#e0f2fe" stroke="#0284c7"/>
   <text class="lb" x="1064" y="657">Instruments / sources</text>
   <rect x="1032" y="670" width="22" height="16" rx="4" fill="#fef3c7" stroke="#d97706"/>
-  <text class="lb" x="1064" y="683">FX / preamp</text>
-  <rect x="1032" y="696" width="22" height="16" rx="4" fill="#e0e7ff" stroke="#4f46e5"/>
-  <text class="lb" x="1064" y="709">DI (FOH integration)</text>
+  <text class="lb" x="1064" y="683">FX / preamp / DI</text>
+  <rect x="1032" y="696" width="22" height="16" rx="4" class="panel"/>
+  <text class="lb" x="1064" y="709">Backup chain (notes)</text>
   <rect x="1032" y="722" width="22" height="16" rx="4" fill="#ffe4e6" stroke="#e11d48"/>
   <text class="lb" x="1064" y="735">Mixer / FOH</text>
   <rect x="1032" y="748" width="22" height="16" rx="4" fill="#ede9fe" stroke="#7c3aed"/>
