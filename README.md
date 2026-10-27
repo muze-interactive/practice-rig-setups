@@ -163,9 +163,12 @@ it trades quality and screen space for portability.
 ![Travel Practice / Jam Rig diagram](./rigs/travel/travel-rig.svg)
 
 - **Instrument** — typically an EHB-style bass with active/passive options.
-- **FX + Preamp + ADDAC** — a **Line6 HX Stomp** does all three: FX, a rudimentary
+- **FX + Preamp + ADDAC** — a **Darkglass Anagram** does all three: FX,
   preamp/amp-IR, and the USB audio interface. Its **headphone out** provides a
   zero-latency monitoring path for practice/performance.
+- **Backup** — the **Line6 HX Stomp** fills the same role (FX, USB interface,
+  headphone out) if the Anagram is unavailable. No DI is needed here, since
+  nothing feeds a PA.
 - **Workstation** — a **MacBook Air** hosts the workstation, with **Loopback** as
   the virtual router.
 - **Capture** — QuickTime, Logic Pro, and OBS, same as the Home Studio.

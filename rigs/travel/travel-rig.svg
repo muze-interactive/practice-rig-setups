@@ -16,7 +16,7 @@
   </defs>
 
   <text class="title" x="40" y="48">Travel Practice / Jam Rig</text>
-  <text class="sub"   x="40" y="72">All-in-the-box — HX Stomp is FX, preamp and USB interface; headphone out for zero-latency monitoring</text>
+  <text class="sub"   x="40" y="72">All-in-the-box — Anagram is FX, preamp and USB interface; headphone out for zero-latency monitoring</text>
 
   <!-- Software panel -->
   <rect class="panel" x="690" y="110" width="330" height="120" rx="14"/>
@@ -30,9 +30,14 @@
   <text class="l" x="115" y="305">Bass</text>
   <text class="s" x="115" y="327">EHB (active/passive)</text>
 
-  <!-- HX Stomp (FX + preamp + interface) -->
+  <!-- Backup -->
+  <rect class="panel" x="40" y="110" width="400" height="80" rx="14"/>
+  <text class="s" x="240" y="138" font-weight="600" fill="#374151">Backup (if the Anagram is out)</text>
+  <text class="p" x="240" y="164">Line6 HX Stomp — same role: FX, USB interface, HP out</text>
+
+  <!-- Darkglass Anagram (FX + preamp + interface) -->
   <rect x="320" y="260" width="250" height="100" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-  <text class="l" x="445" y="295">Line6 HX Stomp</text>
+  <text class="l" x="445" y="295">Darkglass Anagram</text>
   <text class="s" x="445" y="317">FX · preamp · amp/IR sim</text>
   <text class="s" x="445" y="337">USB interface · HP out</text>
 
@@ -44,13 +49,13 @@
   <!-- Headphones -->
   <rect x="320" y="440" width="250" height="86" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
   <text class="l" x="445" y="475">Headphones</text>
-  <text class="s" x="445" y="497">direct from HX Stomp — no latency</text>
+  <text class="s" x="445" y="497">direct from Anagram — no latency</text>
 
-  <!-- Bass -> HX Stomp -->
+  <!-- Bass -> Anagram -->
   <line class="flow" x1="180" y1="310" x2="320" y2="310" marker-end="url(#arr)"/>
   <text class="p" x="250" y="300">TS</text>
 
-  <!-- HX Stomp -> MacBook Air (USB) -->
+  <!-- Anagram -> MacBook Air (USB) -->
   <line class="flow" x1="570" y1="310" x2="755" y2="310" marker-end="url(#arr)"/>
   <text class="p" x="662" y="300">USB</text>
   <text class="p" x="662" y="332">(slight latency)</text>
@@ -58,7 +63,7 @@
   <!-- MacBook Air -> software panel -->
   <line class="flow" x1="855" y1="265" x2="855" y2="232" marker-end="url(#arr)"/>
 
-  <!-- HX Stomp -> Headphones (direct) -->
+  <!-- Anagram -> Headphones (direct) -->
   <line class="flow" x1="445" y1="360" x2="445" y2="440" marker-end="url(#arr)"/>
   <text class="p" x="445" y="404">HP out</text>
 </svg>
