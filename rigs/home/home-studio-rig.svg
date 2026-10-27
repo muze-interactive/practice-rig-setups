@@ -17,7 +17,7 @@
   </defs>
 
   <text class="title" x="40" y="48">Home Studio Rig</text>
-  <text class="sub"   x="40" y="72">Practice + dry recording — JDI keeps the DI feed consistent; HX Stomp inserted only for tone crafting</text>
+  <text class="sub"   x="40" y="72">Practice + recording — Anagram is FX, amp/IR and balanced XLR DI; bypass it for dry takes</text>
 
   <!-- Software panel -->
   <rect class="panel" x="690" y="110" width="330" height="120" rx="14"/>
@@ -26,22 +26,22 @@
   <text class="p" x="855" y="180">Logic Pro · QuickTime · OBS</text>
   <text class="p" x="855" y="205">Backing tracks: Anytune · Moises · Browser</text>
 
-  <!-- HX Stomp (optional branch) -->
-  <g>
-    <rect x="220" y="150" width="170" height="76" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-    <text class="l" x="305" y="182">HX Stomp</text>
-    <text class="s" x="305" y="204">optional — tone crafting</text>
-  </g>
+  <!-- Backup chain -->
+  <rect class="panel" x="40" y="110" width="400" height="120" rx="14"/>
+  <text class="s" x="240" y="138" font-weight="600" fill="#374151">Backup chain (if the Anagram is out)</text>
+  <text class="p" x="240" y="166">Bass → HX Stomp or ToneX One → Radial JDI → XLR</text>
+  <text class="p" x="240" y="188">neither has a balanced XLR out, so the</text>
+  <text class="p" x="240" y="206">JDI passive DI supplies it (thru → ELF)</text>
 
   <!-- Bass -->
   <rect x="50" y="290" width="130" height="80" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
   <text class="l" x="115" y="325">Bass</text>
   <text class="s" x="115" y="347">EHB (active/passive)</text>
 
-  <!-- Radial JDI -->
-  <rect x="220" y="290" width="170" height="80" rx="10" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1.5"/>
-  <text class="l" x="305" y="322">Radial JDI</text>
-  <text class="s" x="305" y="344">passive DI · Jensen Tx</text>
+  <!-- Darkglass Anagram -->
+  <rect x="220" y="290" width="170" height="80" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text class="l" x="305" y="322">Darkglass Anagram</text>
+  <text class="s" x="305" y="344">FX · amp/IR · XLR DI</text>
 
   <!-- Scarlett -->
   <rect x="460" y="285" width="210" height="90" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
@@ -69,22 +69,17 @@
   <text class="l" x="855" y="505">Headphones</text>
   <text class="s" x="855" y="527">Audio-Technica (wired)</text>
 
-  <!-- Bass -> JDI (direct, dry) -->
+  <!-- Bass -> Anagram -->
   <line class="flow" x1="180" y1="330" x2="220" y2="330" marker-end="url(#arr)"/>
-  <text class="p" x="200" y="320">TS · dry</text>
+  <text class="p" x="200" y="320">TS</text>
 
-  <!-- Bass -> HX Stomp (optional detour up) -->
-  <path class="flow opt" d="M170 290 Q190 240 240 226" marker-end="url(#arr)"/>
-  <!-- HX Stomp -> JDI (optional detour down) -->
-  <path class="flow opt" d="M370 226 Q395 250 380 290" marker-end="url(#arr)"/>
-
-  <!-- JDI DI out -> Scarlett -->
+  <!-- Anagram XLR out -> Scarlett -->
   <line class="flow" x1="390" y1="320" x2="460" y2="320" marker-end="url(#arr)"/>
-  <text class="p" x="425" y="310">XLR DI</text>
+  <text class="p" x="425" y="310">XLR out</text>
 
-  <!-- JDI thru -> TE ELF (optional analog monitor) -->
+  <!-- Anagram 1/4" out -> TE ELF (optional analog monitor) -->
   <path class="flow opt" d="M270 370 Q210 420 175 470" marker-end="url(#arr)"/>
-  <text class="p" x="200" y="425">1/4&quot; thru</text>
+  <text class="p" x="200" y="425">1/4&quot; out</text>
 
   <!-- Scarlett <-> Mac Mini (USB-C) -->
   <line class="flow" x1="670" y1="330" x2="755" y2="330" marker-end="url(#arr)"/>

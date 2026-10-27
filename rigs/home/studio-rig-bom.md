@@ -7,16 +7,17 @@
 | Item | Model | Approx. Price | Purpose | Notes |
 |------|-------|---------------|---------|-------|
 | Bass Guitar | Active/Passive | $500-2000 | Primary instrument | Various options available |
-| FX Chain | Pedalboard OR HX Stomp | $200-2000 | Effects processing | HX Stomp, Anagram, Neural DSP provides digital modeling |
+| FX / Preamp / DI | Darkglass Anagram | $900-1000 | Primary bass DSP | FX, amp/IR modeling, balanced XLR out (DI) + 1/4" out for monitor amp |
+| Backup FX | Line6 HX Stomp or IK Multimedia ToneX One | $100-700 | Backup bass DSP | HX Stomp now primarily on guitar; no XLR out — pair with the Radial JDI |
 | Instrument Cables | TS 1/4" | $20-50 each | Signal transmission | High-quality shielded cables recommended |
 
 ### DI, Amplification & Processing
 | Item | Model | Approx. Price | Purpose | Notes |
 |------|-------|---------------|---------|-------|
-| Passive DI | Radial JDI Jensen (single channel) | $250-300 | DI to Scarlett / FOH | Shared with Performance rig; transformer-isolated, thru jack for monitor amp |
+| Passive DI | Radial JDI Jensen (single channel) | $250-300 | Backup-chain DI to Scarlett / FOH | Only needed with the HX Stomp / ToneX One backup; transformer-isolated, thru jack for monitor amp |
 | Preamp/Combo | Trace Elliot ELF & 10" Cab | $700-800 | Optional monitor amp | 200W; monitor only — no longer used as FOH DI |
 | Preamp/Combo | GK Fusion 112 Combo | $1800-1900 | Performance monitor amp | 400/800W; monitor only — no longer used as FOH DI |
-| XLR Cable | Balanced | $30-80 | JDI DI out to Scarlett / FOH | Professional grade recommended |
+| XLR Cable | Balanced | $30-80 | Anagram XLR out to Scarlett / FOH | Professional grade recommended |
 
 ### Audio Interface
 | Item | Model | Approx. Price | Purpose | Notes |
@@ -62,8 +63,8 @@
 ### Required Cables
 | Type | Quantity | Approx. Price Each | Total | Purpose |
 |------|----------|-------------------|-------|---------|
-| TS Instrument Cable | 3 | $30 | $90 | Bass→HX, HX→JDI (or Bass→JDI direct), JDI thru→ELF |
-| XLR Cable | 1 | $50 | $50 | JDI DI out to Scarlett / FOH |
+| TS Instrument Cable | 3 | $30 | $90 | Bass→Anagram, Anagram 1/4" out→ELF, spare for backup chain (HX/ToneX→JDI) |
+| XLR Cable | 1 | $50 | $50 | Anagram XLR out (or backup JDI DI out) to Scarlett / FOH |
 | USB-C Cable | 1 | $30 | $30 | Interface to host |
 | XLR→TS Speaker Cables | 2 | $40 | $80 | Interface to studio monitors |
 | TS Speaker Cable | 1 | $30 | $30 | ELF to monitor cab |
@@ -73,14 +74,14 @@
 ## Total Investment Estimate
 
 ### Hardware Investment
-- **Instruments & Effects**: $700-3500
+- **Instruments & Effects**: $1500-3700
 - **DI & Amplification**: $1080-1580
 - **Audio Interface**: $220-340
 - **Monitoring**: $860-1480
 - **Computer System**: $1300-3300
 - **Cables & Adapters**: $300
 
-**Total Hardware**: $4,860-10,500
+**Total Hardware**: $5,660-10,700
 
 ### Software Investment
 - **Core Software**: $300 (one-time)
@@ -89,13 +90,13 @@
 **Total Software**: $300-370 (initial)
 
 ### Grand Total
-**Complete Setup**: $5,160-10,870
+**Complete Setup**: $5,960-11,070
 
 ## Budget Options
 
 ### Entry Level Setup (~$5,000)
 - Basic bass guitar
-- HX Stomp (instead of pedalboard)
+- ToneX One or HX Stomp (instead of the Anagram) + Radial JDI
 - Focusrite Scarlett 4i4
 - Budget studio monitors
 - Basic headphones
@@ -122,7 +123,7 @@
 ## Recommendations
 
 ### Essential Components (Must Have)
-1. **Passive DI**: Radial JDI Jensen — the consistent DI feed across rigs
+1. **Bass DSP + DI**: Darkglass Anagram — FX, amp/IR and the consistent XLR DI feed across rigs
 2. **Audio Interface**: Focusrite Scarlett 4i4 Gen 3
 3. **Virtual Router**: Loopback
 4. **DAW**: Logic Pro
@@ -130,7 +131,7 @@
 6. **Quality Cables**: Professional grade
 
 ### Nice-to-Have Components
-1. **HX Stomp**: Digital modeling flexibility
+1. **Backup chain**: HX Stomp or ToneX One + Radial JDI Jensen — stands in if the Anagram is unavailable
 2. **Multiple Monitor Options**: Headphones + monitors
 3. **External Storage**: Dedicated audio drive
 4. **Cable Management**: Professional cable routing

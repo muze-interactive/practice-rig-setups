@@ -1,11 +1,11 @@
 # Home Studio — Allen & Heath CQ-18T
 
 The build the home studio centers on. (Home and band-studio are documented
-separately for now; they'll be reconciled once the two rooms settle.) The mixer
-selection rationale — DL16SE vs. CQ-18T and the full value-tier gear list — lives
-in the [comparison doc](./home-studio-setup-part2-comparison.md).
+separately for now; they'll be reconciled once the two rooms settle.) The
+requirements and the full value-tier gear list live in the
+[setup doc](./home-studio-setup-part2.md).
 
-The CQ-18T wins on the three things that matter for this rig: a **built-in
+The CQ-18T covers the three things that matter for this rig: a **built-in
 touchscreen** (so the mixer isn't wholly app-dependent), **native Bluetooth** (no
 dongle for the wireless backing track), and an **officially documented MIDI
 control protocol** (the clean path for Muzikbox voice automation).

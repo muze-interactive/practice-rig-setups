@@ -54,10 +54,9 @@ I'm not sure about IEMs wired/vs wireless.  If I need IEM wireless, I figure I s
 > **Selected build:** the home studio centers on the **Allen & Heath CQ-18T** —
 > documented as a standalone rig in
 > [`rigs/band-studio/home-studio.md`](./rigs/band-studio/home-studio.md). The
-> comparison and full value-tier gear list below is the rationale behind that
-> choice.
+> value-tier gear list below builds around it.
 
-## Candidate Gear (Value Tier, ~$1.5–2.5k all-in)
+## Candidate Gear (Value Tier, ~$2.3–3.3k all-in)
 
 The keystone of this build is a **digital mixer that doubles as a multitrack USB
 interface with tablet/phone app control**. One box then covers mixing, remote
@@ -84,88 +83,26 @@ keys). 12-channel is workable but tight on mic preamps once 3 drum mics are in.
 
 ### Mixer — core of the rig
 
-The core is the **Mackie DL16SE (~$799)**. One box covers mixing, remote control,
-per-channel USB passthrough to the Mac DAW, and aux sends to wedges and IEMs.
+The core is the **Allen & Heath CQ-18T (~$1,499)**. One box covers mixing, remote
+control, per-channel USB passthrough to the Mac DAW, both backing-track paths, and
+aux sends to wedges and IEMs.
 
 | Item | Model | Approx. Price | Why |
 |------|-------|---------------|-----|
-| Digital mixer | **Mackie DL16SE** | ~$799 | 16 mic pres (8 XLR + 8 combo, 2 Hi-Z), 16×16 USB multitrack to the Mac (per-channel DAW passthrough), **wired Ethernet *or* Wi-Fi** control, 6 aux (stereo-linkable) / 8 assignable XLR outs / 13 buses, rackmountable (3U, 6.2 lb). Best channel-count-per-dollar for a 5-piece with 3 drum mics. |
-| Bluetooth receiver | 1Mii / small BT→line receiver into a spare line input | $25–40 | Adds the **native Bluetooth backing-track path** the DL16SE lacks. USB return from Ableton/Logic covers the **USB path**. Both paths satisfied. |
+| Digital mixer | **Allen & Heath CQ-18T** | ~$1,499 | 16 mic pres (8 XLR + 8 combo with Hi-Z) + dedicated stereo line in, 24×22 USB multitrack to the Mac (per-channel DAW passthrough), **built-in touchscreen** + iPad/phone apps (CQ MixPad / CQ4You), **native Bluetooth**, 6 aux "Mix" outs (stereo-linkable) + Main L/R, and an **officially documented MIDI control protocol**. |
 
-**Why the DL16SE:** on a mixer whose entire control surface *is* the app,
-software longevity is the durability concern that matters. Mackie's **Master
-Fader SE is actively maintained** (iOS/Android/Mac/Win, up to 20 devices) — which
-is what ruled out the Behringer XR18, whose X-Air iOS app was pulled from the App
-Store and stranded users on current iPads/iOS. **Wired Ethernet control** is also
-more reliable than Wi-Fi *and* frees up the 2.4 GHz band.
-
-**Alternative — Allen & Heath CQ-18T (~$1,499):** worth considering if control
-openness and automation matter (they do, given the muzicbox roadmap). Key
-differences vs. the DL16SE:
-
-| | Mackie DL16SE | A&H CQ-18T |
-|---|---|---|
-| Price | ~$799 | ~$1,499 |
-| Mic pres | 16 | 16 |
-| Control surface | App only | **Built-in touchscreen** + app (CQ MixPad / CQ4You) |
-| Native Bluetooth | No (needs BT receiver) | **Yes** (drops the 1Mii dongle) |
-| Remote-control protocol | Proprietary, reverse-engineered only | **Officially documented MIDI protocol** (see below) |
-| USB multitrack | 16×16 | 16-in/… USB to DAW |
-
-Not dropping the DL16SE as the value core — the CQ-18T is a ~$700 step-up that
-buys a physical touchscreen (so it isn't wholly app-dependent, unlike the XR18),
-native BT, and a vendor-documented control protocol. See **Control & automation**
-below for the protocol detail that makes it attractive for muzicbox.
+The built-in touchscreen means the mixer stays usable even if the apps lapse, and
+native Bluetooth covers the wireless backing-track path with no dongle. USB return
+from Logic/Ableton covers the **USB path**.
 
 #### Control & automation
 
-Two different "Mackie" protocols get confused here — keep them separate:
-
 - **Mackie Control (MCU/MCP)** is a MIDI *control-surface* protocol for driving a
-  **DAW** (Logic, Ableton). Fully documented/reverse-engineered. Relevant to
-  DAW voice-automation, **not** to controlling the mixer.
-- **The DL-series network protocol** is what Master Fader uses to talk to the
-  DL16SE itself. Proprietary, over **TCP** (not OSC).
+  **DAW** (Logic, Ableton). Fully documented. Relevant to DAW voice-automation,
+  **not** to controlling the mixer.
+- **The CQ MIDI protocol** is how third-party code controls the CQ-18T itself.
 
-**Official API:** none. Mackie publishes no SDK/OSC/remote-control API — the only
-sanctioned control is the Master Fader app. Unlike the Behringer X-Air/X32 family,
-whose **OSC** protocol is openly documented and is the gold standard for exactly
-this kind of automation, Mackie keeps theirs closed. Honest trade: we picked the
-DL16SE for a *currently-maintained vendor app* + build/support reputation over the
-X-Air's *better-documented control protocol*.
-
-**But the protocol has been reverse-engineered** — two independent proofs it's
-accessible:
-
-1. **Mixing Station** (commercial, ~$15) fully controls the DL16S/DL32S/DL32R as a
-   third-party surface.
-2. **[DigiMixer](https://github.com/jskeet/DemoCode/tree/main/DigiMixer)** (Jon Skeet,
-   open-source C#) decoded the DL protocol via Wireshark.
-   TCP; currently supports **mute, faders, channel names, meter levels** (FX/playback
-   not yet). Best-effort hobby project, but the protocol notes are public.
-
-**Obsolescence takeaway:** "vendor pulls the app" ≠ "mixer bricked." Third-party
-control (Mixing Station) and an open-source protocol impl (DigiMixer) already exist
-independently of Mackie, so a worst-case Master Fader abandonment still leaves
-working control paths — a better position than the XR18 story first suggested.
-
-**Voice-automation notes** (see the separate [muzicbox](https://github.com/muze-interactive/muzicbox)
-project — Python):
-
-- *DAW control* is independent of the mixer: Logic and Ableton both speak **Mackie
-  Control (MCU)** over MIDI, and Ableton also does OSC (AbletonOSC / Max-for-Live).
-  `voice → intent → MIDI(MCU)/OSC → DAW` is well-trodden.
-- *"Light mixer adjustment via voice"* (mute channel, bump a monitor, raise vocals)
-  maps to **mute / fader / aux-send** — exactly the ops DigiMixer already decoded, so
-  it's feasible to port that TCP framing into muzicbox (use DigiMixer's `Protocols`
-  dir as reference, then Wireshark a Master Fader session to confirm). Caveats:
-  proprietary, unsupported, and a firmware update could shift the protocol.
-- If voice-driven mixer control becomes a **first-class** feature, an X32/X-Air-protocol
-  mixer or an Allen & Heath SQ/CQ (documented protocol) would make it far easier —
-  see the CQ-18T note below.
-
-**Allen & Heath CQ-18T — the automation-friendly alternative.** Unlike Mackie
-(closed) and closer to Behringer (open), A&H **publishes a control protocol spec**:
+A&H **publishes the mixer control protocol spec**:
 
 - **Officially documented MIDI protocol** — a downloadable PDF (*CQ MIDI Protocol
   V1.2* on the CQ-18T resources page). Vendor-supported, so you code against a real
@@ -180,14 +117,17 @@ project — Python):
 - **No native OSC** (A&H's position: use their MIDI protocol). Third-party proof it
   works: a **Bitfocus Companion** module exists (`allenheath-cq`).
 
-For muzicbox this is the cleaner path — an official spec is more obsolescence-proof
-than reverse-engineering, and the built-in touchscreen means the mixer stays usable
-even if the apps lapse. Trade-off is ~$700 over the DL16SE.
+**Voice-automation notes** (see the separate [muzicbox](https://github.com/muze-interactive/muzicbox)
+project — Python):
 
-Sources: [DigiMixer: Protocols](https://codeblog.jonskeet.uk/2024/01/02/digimixer-protocols/),
-[Intro to DigiMixer](https://codeblog.jonskeet.uk/2022/10/16/introduction-to-digimixer/),
-[Mixing Station](https://apps.apple.com/us/app/mixing-station/id1438352631),
-[Mackie Control protocol notes](https://github.com/NicoG60/TouchMCU/blob/main/doc/mackie_control_protocol.md),
+- *DAW control* is independent of the mixer: Logic and Ableton both speak **Mackie
+  Control (MCU)** over MIDI, and Ableton also does OSC (AbletonOSC / Max-for-Live).
+  `voice → intent → MIDI(MCU)/OSC → DAW` is well-trodden.
+- *"Light mixer adjustment via voice"* (mute channel, bump a monitor, raise vocals)
+  maps to **mute / fader / aux-send** — all covered by the documented CQ MIDI
+  protocol, so muzicbox can code against the official spec.
+
+Sources: [Mackie Control protocol notes](https://github.com/NicoG60/TouchMCU/blob/main/doc/mackie_control_protocol.md),
 [CQ-18T resources (MIDI protocol)](https://www.allen-heath.com/hardware/cq/cq-18t/resources/),
 [Bitfocus Companion — A&H CQ](https://bitfocus.io/connections/allenheath-cq).
 
@@ -209,10 +149,10 @@ For basement / large living room / coffee-shop, a pair of 12" powered tops:
 ### In-Ear Monitors (IEMs) — add-on
 
 The mixer is the IEM engine — each performer's monitor mix is an **aux send**.
-The DL16SE's 6 aux sends (stereo-linkable) give up to 6 mono or 3 stereo IEM
+The CQ-18T's 6 aux Mixes (stereo-linkable) give up to 6 mono or 3 stereo IEM
 mixes, plenty for a 5-piece even with a couple of wedges still running. With
-**Master Fader SE, each musician can control their own aux mix from their own
-phone**, which replaces dedicated personal-monitor-mixer hardware.
+**CQ MixPad / CQ4You, each musician can control their own aux mix from their own
+phone or tablet**, which replaces dedicated personal-monitor-mixer hardware.
 
 For the wireless ears themselves, standardize on the **Shure PSM300**:
 
@@ -261,7 +201,7 @@ ever mic a cab instead of DI.
 | Mic clips & cables | XLR cables + clips as needed | ~$15–25 ea | One XLR run per mic back to the mixer. |
 
 Rough add for a full mic locker + stands at the value tier: **~$500–700**, so plan
-mics/stands as a phase-2 add on top of the ~$1.5–2.5k mixer + PA budget, or fold a
+mics/stands as a phase-2 add on top of the ~$2.3–3.3k mixer + PA budget, or fold a
 minimal set (2× SM58 + kick + SM57) into the balanced bundle.
 
 ### Optional / add-later
@@ -274,18 +214,20 @@ minimal set (2× SM58 + kick + SM57) into the balanced bundle.
 
 ### Example value bundles
 
-- **Tightest (~$1.6k):** DL16SE + BT receiver + 2× Mackie Thump212 (tops, reused
-  as wedges) + cables/DI/stands. No dedicated sub, monitors, or IEMs yet.
-- **Balanced (~$2.6k):** DL16SE + BT receiver + 2× Mackie SRM212 (tops) + 2×
-  Thump212 dedicated wedges + cables/DI/stands. Add a sub and PSM300 IEMs when the
+- **Tightest (~$2.3k):** CQ-18T + 2× Mackie Thump212 (tops, reused as wedges) +
+  cables/DI/stands. No dedicated sub, monitors, or IEMs yet.
+- **Balanced (~$3.3k):** CQ-18T + 2× Mackie SRM212 (tops) + 2× Thump212 dedicated
+  wedges + cables/DI/stands. Add a sub and PSM300 IEMs when the
   room and budget call for it.
 
 ### How this satisfies the requirements
 
 - **Mixing / line level:** 16 mic pres cover all listed sources with headroom.
-- **Both backing-track paths:** BT receiver (Bluetooth) + USB return (Ableton/Logic).
-- **Tablet/phone control:** Master Fader SE over wired Ethernet or Wi-Fi.
-- **Per-channel DAW passthrough:** DL16SE as a 16×16 USB interface into Logic/Ableton.
+- **Both backing-track paths:** native Bluetooth + USB return (Ableton/Logic), plus
+  the dedicated stereo line input.
+- **Tablet/phone control:** CQ MixPad / CQ4You over Wi-Fi or Ethernet, plus the
+  built-in touchscreen.
+- **Per-channel DAW passthrough:** CQ-18T as a 24×22 USB interface into Logic/Ableton.
 - **Outputs:** stereo main → PA tops; aux sends → 2 monitors.
 - **Powered PA:** all speakers listed are self-powered (no separate amp rig).
-- **Portable:** rack-mount mixer + two tops load easily into an SUV.
+- **Portable:** compact mixer + two tops load easily into an SUV.

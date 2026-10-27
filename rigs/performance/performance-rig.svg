@@ -19,22 +19,25 @@
   </defs>
 
   <text class="title" x="40" y="48">Performance Rig</text>
-  <text class="sub"   x="40" y="72">JDI is the FOH path; monitor amps are optional and configured per venue</text>
+  <text class="sub"   x="40" y="72">Anagram XLR out is the FOH path; monitor amps are optional and configured per venue</text>
 
   <!-- Bass -->
   <rect x="40" y="270" width="130" height="80" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
   <text class="l" x="105" y="305">Bass</text>
   <text class="s" x="105" y="327">active pickups</text>
 
-  <!-- FX / HX Stomp -->
-  <rect x="210" y="265" width="200" height="90" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-  <text class="l" x="310" y="300">HX Stomp</text>
-  <text class="s" x="310" y="322">or MXR mini compressor</text>
+  <!-- Darkglass Anagram -->
+  <rect x="230" y="265" width="260" height="90" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text class="l" x="360" y="300">Darkglass Anagram</text>
+  <text class="s" x="360" y="322">FX · amp/IR · balanced XLR DI</text>
 
-  <!-- Radial JDI -->
-  <rect x="450" y="265" width="190" height="90" rx="10" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1.5"/>
-  <text class="l" x="545" y="298">Radial JDI</text>
-  <text class="s" x="545" y="320">passive DI · Jensen Tx</text>
+  <!-- Backup chain -->
+  <rect class="panel" x="40" y="105" width="480" height="120" rx="14"/>
+  <text class="lh" x="60" y="130">Backup chain (if the Anagram is out)</text>
+  <text class="lb" x="60" y="154">Bass → HX Stomp, ToneX One or MXR mini comp → Radial JDI</text>
+  <text class="lb" x="60" y="176">None has a balanced XLR out, so the JDI passive DI</text>
+  <text class="lb" x="60" y="196">supplies FOH (XLR DI) and its 1/4″ thru feeds the</text>
+  <text class="lb" x="60" y="214">monitor amps — same modes as below.</text>
 
   <!-- FOH PA -->
   <rect x="880" y="120" width="180" height="86" rx="10" fill="#ffe4e6" stroke="#e11d48" stroke-width="1.5"/>
@@ -59,25 +62,21 @@
   <text class="s" x="760" y="517">preamp + 12&quot; combo</text>
   <text class="s" x="760" y="535">(modes 2 &amp; 3)</text>
 
-  <!-- Bass -> FX -->
-  <line class="flow" x1="170" y1="310" x2="210" y2="310" marker-end="url(#arr)"/>
-  <text class="p" x="190" y="300">TS</text>
+  <!-- Bass -> Anagram -->
+  <line class="flow" x1="170" y1="310" x2="230" y2="310" marker-end="url(#arr)"/>
+  <text class="p" x="200" y="300">TS</text>
 
-  <!-- FX -> JDI -->
-  <line class="flow" x1="410" y1="310" x2="450" y2="310" marker-end="url(#arr)"/>
-  <text class="p" x="430" y="300">TS</text>
+  <!-- Anagram XLR out -> FOH -->
+  <path class="flow" d="M490 280 Q760 240 880 190" marker-end="url(#arr)"/>
+  <text class="p" x="592" y="256">XLR out</text>
 
-  <!-- JDI DI out -> FOH -->
-  <path class="flow" d="M620 280 Q800 240 880 200" marker-end="url(#arr)"/>
-  <text class="p" x="760" y="232">XLR DI</text>
+  <!-- Anagram 1/4" out -> TE ELF (modes 1 & 3) -->
+  <path class="flow opt" d="M300 355 L310 460" marker-end="url(#arr)"/>
+  <text class="p" x="305" y="408">1/4&quot; out (modes 1 &amp; 3)</text>
 
-  <!-- JDI thru -> TE ELF (modes 1 & 3) -->
-  <path class="flow opt" d="M510 355 Q400 410 310 460" marker-end="url(#arr)"/>
-  <text class="p" x="390" y="408">1/4&quot; thru (modes 1 &amp; 3)</text>
-
-  <!-- JDI thru -> GK Fusion (mode 2 only) -->
-  <path class="flow opt" d="M580 355 Q700 410 760 460" marker-end="url(#arr)"/>
-  <text class="p" x="700" y="408">1/4&quot; thru (mode 2)</text>
+  <!-- Anagram 1/4" out -> GK Fusion (mode 2 only) -->
+  <path class="flow opt" d="M450 355 Q650 400 760 460" marker-end="url(#arr)"/>
+  <text class="p" x="590" y="408">1/4&quot; out (mode 2)</text>
 
   <!-- TE ELF -> TE 10" Cab (speaker out) -->
   <line class="flow opt" x1="410" y1="505" x2="440" y2="505" marker-end="url(#arr)"/>
@@ -94,7 +93,7 @@
   <text class="lb" x="720" y="314"><tspan font-weight="600">2.</tspan> GK Fusion 112 only — headroom &amp; low end</text>
   <text class="lb" x="720" y="334"><tspan font-weight="600">3.</tspan> TE → GK daisy — clarity + presence</text>
   <text class="lb" x="740" y="354"><tspan font-weight="600">3a.</tspan> GK Return (preamp bypass)</text>
-  <text class="lb" x="760" y="372">— when HX Stomp supplies FOH tone</text>
+  <text class="lb" x="760" y="372">— when Anagram supplies FOH tone</text>
   <text class="lb" x="740" y="392"><tspan font-weight="600">3b.</tspan> GK preamp input</text>
   <text class="lb" x="760" y="410">— when there's no FOH</text>
 </svg>

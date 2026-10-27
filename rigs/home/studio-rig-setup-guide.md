@@ -3,10 +3,9 @@
 ## Quick Start Checklist
 
 ### Hardware Connections
-- [ ] Bass → JDI input (TS cable) — direct when not crafting tones
-- [ ] Bass → HX Stomp → JDI input (TS cables) — optional, when crafting tones
-- [ ] JDI DI out → Scarlett Input 1 (XLR cable)
-- [ ] JDI thru → Trace Elliot ELF input (TS cable) — optional, for analog monitor
+- [ ] Bass → Darkglass Anagram input (TS cable) — bypass for dry takes, engage when crafting tones
+- [ ] Anagram XLR out → Scarlett Input 1 (XLR cable)
+- [ ] Anagram 1/4" out → Trace Elliot ELF input (TS cable) — optional, for analog monitor
 - [ ] ELF Speaker Out → 10" Monitor Cab (TS cable) — optional, paired with above
 - [ ] Scarlett → Mac Mini (USB-C cable)
 - [ ] Scarlett Outputs 1-2 → Adam F5 Monitors (XLR→TS cables)
@@ -24,13 +23,13 @@
 **Use Case**: Simple practice without digital components
 
 **Setup**:
-1. Connect bass → (optional HX Stomp) → JDI input
-2. Patch JDI thru → Trace Elliot ELF → 10" Monitor Cab
-3. Power on ELF
+1. Connect bass → Anagram input
+2. Patch Anagram 1/4" out → Trace Elliot ELF → 10" Monitor Cab
+3. Power on Anagram and ELF
 4. Adjust volume and EQ on ELF
-5. Play through the monitor cab; JDI DI out can stay unplugged
+5. Play through the monitor cab; Anagram XLR out can stay unplugged
 
-**Benefits**: Zero latency, immediate response. The JDI stays in line so the
+**Benefits**: Low latency, immediate response. The Anagram stays in line so the
 signal chain matches the digital workflows below — only the monitor path changes.
 
 ---
@@ -120,13 +119,25 @@ signal chain matches the digital workflows below — only the monitor path chang
 - Record enabled
 - Monitoring: On
 
+## Backup Chain (Anagram unavailable)
+
+The **HX Stomp** (now primarily on guitar) or a **ToneX One** stands in for the
+Anagram. Neither has a balanced XLR out, so add the **Radial JDI Jensen** passive DI:
+
+- [ ] Bass → HX Stomp or ToneX One input (TS cable)
+- [ ] HX Stomp / ToneX One output → JDI input (TS cable)
+- [ ] JDI DI out → Scarlett Input 1 (XLR cable)
+- [ ] JDI thru → Trace Elliot ELF input (TS cable) — optional, for analog monitor
+
+The JDI is passive with no gain stage, so raise Scarlett Input 1 gain ~6-10 dB.
+
 ## Troubleshooting
 
 ### Common Issues
 
 **No Sound from Instrument**:
-1. Check cable connections (bass → JDI input, JDI DI out → Scarlett)
-2. Verify HX Stomp is powered/not muted if inserted upstream
+1. Check cable connections (bass → Anagram input, Anagram XLR out → Scarlett)
+2. Verify the Anagram is powered, not muted, and the preset isn't silent
 3. Check Scarlett input gain (Input 1)
 4. Verify Loopback routing
 
@@ -184,8 +195,8 @@ signal chain matches the digital workflows below — only the monitor path chang
 ## Quick Reference
 
 ### Volume Levels (Typical)
-- **JDI**: passive, no gain stage (input level == thru level)
-- **Scarlett Input 1**: -12dB to -6dB (the JDI is passive, so add ~6-10 dB of gain vs. an active source)
+- **Anagram**: set XLR out level so the Scarlett input peaks without clipping
+- **Scarlett Input 1**: -12dB to -6dB (Anagram XLR out); with the backup JDI, add ~6-10 dB of gain since the JDI is passive
 - **Scarlett Output**: -10dB to -5dB
 - **Studio Monitors**: 9-10 o'clock
 - **ELF Input/Master** (only when ELF is patched in as analog monitor): 12 / 10-11 o'clock
